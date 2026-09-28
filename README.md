@@ -1,1 +1,1 @@
-Clean and Asthetic Student Affairs website
+Clean and Aesthetic Student Affairs website
