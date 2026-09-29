@@ -645,6 +645,7 @@ td.act{text-align:right}
   <div class="wrap">
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menu"><span class="bars"></span>Menu</button>
     <ul class="menu" id="menu">
+      <li><a href="#home" class="active">Home</a></li>
       <li class="has-sub"><a href="#about">About <svg class="ico caret"><use href="#i-down"/></svg></a>
         <ul class="sub">
           <li><a href="#about">About the office<small>What Student Affairs does</small></a></li>
@@ -655,6 +656,41 @@ td.act{text-align:right}
 </nav>
 
 <main>
+
+<section id="home">
+  <div class="slider" id="slider" aria-roledescription="carousel" aria-label="Campus highlights">
+    <div class="track" id="track" aria-live="off">
+      <figure class="slide" aria-roledescription="slide" aria-label="1 of 5">
+        <img src="assets/img/hero/campus.webp" alt="Open-air atrium on the IIT Bhilai campus">
+        <figcaption><strong>Welcome to IIT Bhilai</strong><span>A young campus with a lively student community</span></figcaption>
+      </figure>
+      <figure class="slide" aria-roledescription="slide" aria-label="2 of 5">
+        <img src="assets/img/hero/cultural.webp" alt="Dance troupe performing on a spotlit stage" loading="lazy">
+        <figcaption><strong>Cultural Council</strong><span>Dance, drama, music, art and more</span></figcaption>
+      </figure>
+      <figure class="slide plain" aria-roledescription="slide" aria-label="3 of 5">
+        <img src="assets/img/hostel/kanhar.webp" alt="Kanhar Hostel (Boys Hostel) building" loading="lazy">
+      </figure>
+      <figure class="slide" aria-roledescription="slide" aria-label="4 of 5">
+        <img src="assets/img/hostel/1.webp" alt="Hostel courtyard lit up at night" loading="lazy">
+        <figcaption><strong>Hostel life</strong><span>Kanhar, Gopad, Indravati and Shivnath: four hostels, one campus family</span></figcaption>
+      </figure>
+      <figure class="slide" aria-roledescription="slide" aria-label="5 of 5">
+        <img src="assets/img/gym/gym-1.webp" alt="Rows of racks and benches in the institute gym" loading="lazy">
+        <figcaption><strong>The institute gym</strong><span>Modern machines, open morning and evening</span></figcaption>
+      </figure>
+    </div>
+    <button class="sl-btn prev" id="slPrev" aria-label="Previous slide"><svg class="ico"><use href="#i-left"/></svg></button>
+    <button class="sl-btn next" id="slNext" aria-label="Next slide"><svg class="ico"><use href="#i-right"/></svg></button>
+    <div class="dots" id="dots" role="group" aria-label="Choose slide"></div>
+  </div>
+
+  <div class="wrap intro">
+    <h2>Empowering Student Life</h2>
+    <p class="lead">Hostels, clubs, sports and support. Everything you need to settle in, stay well and get involved at IIT Bhilai.</p>
+    
+  </div>
+</section>
 
 <section id="about" class="tint">
   <div class="wrap">
@@ -730,7 +766,7 @@ td.act{text-align:right}
     </div>
     <div class="f-bottom">
       <span>&copy; 2026 Office of Student Affairs, Indian Institute of Technology Bhilai</span>
-      <a class="to-top" href="#">Back to top <svg class="ico"><use href="#i-down"/></svg></a>
+      <a class="to-top" href="#home">Back to top <svg class="ico"><use href="#i-down"/></svg></a>
     </div>
   </div>
 </footer>
