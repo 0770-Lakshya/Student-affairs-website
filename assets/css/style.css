@@ -456,9 +456,9 @@ td.act{text-align:right}
 
 /* Govt portals */
 .portals{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;max-width:1380px;margin:0 auto}
-.portal{display:flex;gap:16px;align-items:flex-start;padding:20px 22px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+.portal{display:flex;flex-direction:column;gap:14px;padding:20px 22px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .15s,box-shadow .15s}
 .portal:hover{border-color:var(--purple);box-shadow:0 10px 24px rgba(29,21,72,.08);color:var(--ink)}
-.portal .badge{flex:none;width:46px;height:46px;border-radius:50%;background:var(--tint);color:var(--purple);display:grid;place-items:center;font-weight:900;font-size:.95rem;border:2px solid var(--purple)}
+.portal .plogo{height:48px;width:auto;max-width:100%;object-fit:contain;object-position:left center}
 .portal strong{display:flex;align-items:center;gap:6px;color:var(--purple);font-size:1.05rem;line-height:1.3}
 .portal strong .ico{width:14px;height:14px;opacity:.6}
 .portal span{display:block;color:var(--muted);font-size:.95rem;line-height:1.45;margin-top:4px}
