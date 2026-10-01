@@ -666,3 +666,78 @@ td.act{text-align:right}
 .drone{margin:0}
 .drone video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0b0820;border-bottom:4px solid var(--gold)}
 .drone figcaption{margin-top:8px;font-size:.85rem;color:var(--muted)}
+
+/* MERAZ */
+
+.meraz-section {
+  margin-top: 48px;
+}
+
+.meraz-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 28px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.meraz-text {
+  padding: 28px;
+  background: #f7f7f7;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.meraz-text h4 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+}
+
+.meraz-text p {
+  margin: 0;
+  line-height: 1.7;
+  color: #555;
+}
+
+.meraz-video {
+    overflow: hidden;
+    border-radius: 14px;
+    aspect-ratio: 16 / 9;
+}
+
+.meraz-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+.meraz-gallery {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: 24px;
+    padding-bottom: 10px;
+
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+
+.meraz-gallery img {
+    flex: 0 0 320px;
+    width: 320px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: start;
+}
+
+@media (max-width: 600px) {
+    .meraz-gallery img {
+        flex: 0 0 78%;
+        width: 78%;
+        height: 220px;
+    }
+}
