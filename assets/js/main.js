@@ -127,17 +127,6 @@
   lb.addEventListener('click',function(e){if(e.target===lb||e.target.tagName==='FIGURE')lb.close();});
   lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(gi-1);if(e.key==='ArrowRight')show(gi+1);});
 
-  /* Meraz trailer: load YouTube only when asked */
-  var v=document.getElementById('merazVideo');
-  if(v)v.querySelector('button').addEventListener('click',function(){
-    var f=document.createElement('iframe');
-    f.src='https://www.youtube-nocookie.com/embed/'+v.dataset.yt+'?autoplay=1&rel=0';
-    f.title='Meraz 5.0 trailer';
-    f.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
-    f.allowFullscreen=true;
-    v.innerHTML='';v.appendChild(f);
-  });
-
   /* Lazy videos: load and play only when on screen (skip for reduced motion / data saver) */
   var saveData=navigator.connection&&navigator.connection.saveData;
   [].forEach.call(document.querySelectorAll('video.lazy-video'),function(v){
