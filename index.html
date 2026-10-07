@@ -9,9 +9,11 @@
 <link rel="icon" type="image/png" href="assets/img/logo/iit-bhilai-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<span id="top"></span>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
@@ -34,13 +36,13 @@
 
 <header class="masthead">
   <div class="wrap">
-    <img src="assets/img/logo/iit-bhilai-logo.png" alt="Indian Institute of Technology Bhilai logo" width="124" height="128">
+    <a class="logo-main" href="index.html"><img src="assets/img/logo/iit-bhilai-logo.png" alt="Indian Institute of Technology Bhilai logo" width="224" height="128"></a>
     <div class="titleblock">
       <h1>Student Affairs</h1>
       <div class="rule" role="presentation"></div>
       <p>Indian Institute of Technology Bhilai</p>
     </div>
-    <div class="spacer" aria-hidden="true"></div>
+    <div class="logo-2"><img src="assets/img/logo/student-affairs-logo.webp" alt="Student Affairs, IIT Bhilai logo" width="228" height="128"></div>
   </div>
 </header>
 
@@ -48,45 +50,38 @@
   <div class="wrap">
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menu"><span class="bars"></span>Menu</button>
     <ul class="menu" id="menu">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#people">People</a></li>
-      <li class="has-sub"><a href="#cosa">CoSA <svg class="ico caret"><use href="#i-down"/></svg></a>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="people.html">People</a></li>
+      <li class="has-sub"><a href="cosa.html">CoSA <svg class="ico caret"><use href="#i-down"/></svg></a>
         <ul class="sub">
-          <li><a href="#cosa">Council of Student Affairs<small>Council and major events</small></a></li>
-          <li><a href="#meraz">Meraz<small>The annual techno-cultural fest</small></a></li>
-          <li><a href="#clubs">Clubs<small>Cultural, sci-tech and societies</small></a></li>
+          <li><a href="cosa.html#cosa">Council of Student Affairs<small>Council and major events</small></a></li>
+          <li><a href="cosa.html#meraz">Meraz<small>The annual techno-cultural fest</small></a></li>
+          <li><a href="cosa.html#clubs">Clubs<small>Cultural, sci-tech and societies</small></a></li>
         </ul>
       </li>
-      <li class="has-sub"><a href="#sports">Sports <svg class="ico caret"><use href="#i-down"/></svg></a>
+      <li><a href="hostels.html">Hostels</a></li>
+      <li class="has-sub"><a href="sports.html">Sports <svg class="ico caret"><use href="#i-down"/></svg></a>
         <ul class="sub">
-          <li><a href="#sports">Sports and grounds<small>Clubs, courts and Prayatna</small></a></li>
-          <li><a href="#gym">Gym<small>Machines, timings and equipment</small></a></li>
+          <li><a href="sports.html#sports">Sports and grounds<small>Clubs, courts and Prayatna</small></a></li>
+          <li><a href="sports.html#gym">Gym<small>Timings and photos</small></a></li>
           <li><a href="https://sportsandyoga.iitbhilai.ac.in/index.html" target="_blank" rel="noopener">Sports and Yoga site<small>Events, Prayatna and contact</small></a></li>
         </ul>
       </li>
-      <li class="has-sub"><a href="#hostels">Hostels <svg class="ico caret"><use href="#i-down"/></svg></a>
-        <ul class="sub">
-          <li><a href="#hostels">Hostel life<small>Hostels, wardens and rules</small></a></li>
-          <li><a href="#mess">Mess<small>Timings, caterers and location</small></a></li>
-          <li><a href="#gallery">Gallery<small>Photos of hostels and facilities</small></a></li>
-        </ul>
-      </li>
-      <li><a href="https://www.iitbhilai.ac.in/index.php?pid=placement" target="_blank" rel="noopener">CCPS <svg class="ico ext-ico"><use href="#i-ext"/></svg></a></li>
       <li><a href="hall-of-fame.html">Hall of Fame</a></li>
-      <li><a href="#anti-ragging">Anti-Ragging</a>
-        <!-- <ul class="sub"> -->
-          <!-- <li><a href="#anti-ragging">Anti-Ragging<small>Committee, helpline and rules</small></a></li>
-          <li><a href="women-welfare.html">Women Welfare Committee<small>Safety, ICC and helplines</small></a></li> -->
-        <!-- </ul> -->
-      </li>
-      <li class="has-sub"><a href="#forms">Resources <svg class="ico caret"><use href="#i-down"/></svg></a>
+      <li><a href="anti-ragging.html">Anti-Ragging</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li class="has-sub"><a href="important-links.html">Important Links <svg class="ico caret"><use href="#i-down"/></svg></a>
         <ul class="sub">
-          <li><a href="#forms">Forms and documents<small>Manuals, calendar and forms</small></a></li>
-          <li><a href="#portals">Government portals<small>MY Bharat, scholarships, helplines</small></a></li>
+          <li><a href="https://polaris.iitbhilai.ac.in/" target="_blank" rel="noopener">Polaris <svg class="ico ext-ico"><use href="#i-ext"/></svg></a></li>
+          <li><a href="https://aimsportal.iitbhilai.ac.in/iitbhAims/" target="_blank" rel="noopener">AIMS portal <svg class="ico ext-ico"><use href="#i-ext"/></svg></a></li>
+          <li><a href="https://mess.iitbhilai.ac.in/" target="_blank" rel="noopener">Mess website<small>Campus network only</small></a></li>
+          <li><a href="https://meraz.iitbhilai.ac.in/" target="_blank" rel="noopener">Meraz <svg class="ico ext-ico"><use href="#i-ext"/></svg></a></li>
+          <li><a href="https://www.iitbhilai.ac.in/index.php?pid=placement" target="_blank" rel="noopener">CCPS <svg class="ico ext-ico"><use href="#i-ext"/></svg></a></li>
+          <li><a href="https://sac.iitbhilai.ac.in/" target="_blank" rel="noopener">Alumni <svg class="ico ext-ico"><use href="#i-ext"/></svg></a></li>
+          <li><a href="important-links.html#portals">Government portals<small>Scholarships, helplines, learning</small></a></li>
         </ul>
       </li>
-      <li><a href="https://sac.iitbhilai.ac.in/" target="_blank" rel="noopener">Alumni <svg class="ico ext-ico"><use href="#i-ext"/></svg></a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -94,638 +89,73 @@
 <main>
 
 <section id="home">
-  <div class="slider" id="slider" aria-roledescription="carousel" aria-label="Campus highlights">
-    <div class="track" id="track" aria-live="off">
-      <figure class="slide" aria-roledescription="slide" aria-label="1 of 5">
+  <div class="slider" data-slider data-autoplay aria-roledescription="carousel" aria-label="Campus highlights">
+    <div class="track" aria-live="off">
+      <figure class="slide" aria-roledescription="slide" aria-label="1 of 3">
         <img src="assets/img/hero/campus.webp" alt="Open-air atrium on the IIT Bhilai campus">
         <figcaption><strong>Welcome to IIT Bhilai</strong><span>A young campus with a lively student community</span></figcaption>
       </figure>
-      <figure class="slide" aria-roledescription="slide" aria-label="2 of 5">
+      <figure class="slide" aria-roledescription="slide" aria-label="2 of 3">
         <img src="assets/img/hero/cultural.webp" alt="Dance troupe performing on a spotlit stage" loading="lazy">
         <figcaption><strong>Cultural Council</strong><span>Dance, drama, music, art and more</span></figcaption>
       </figure>
-      <figure class="slide plain" aria-roledescription="slide" aria-label="3 of 5">
-        <img src="assets/img/hostel/kanhar.webp" alt="Kanhar Hostel (Boys Hostel) building" loading="lazy">
-      </figure>
-      <figure class="slide" aria-roledescription="slide" aria-label="4 of 5">
-        <img src="assets/img/hostel/1.webp" alt="Hostel courtyard lit up at night" loading="lazy">
-        <figcaption><strong>Hostel life</strong><span>Kanhar, Gopad, Indravati and Shivnath: four hostels, one campus family</span></figcaption>
-      </figure>
-      <figure class="slide" aria-roledescription="slide" aria-label="5 of 5">
+      <figure class="slide" aria-roledescription="slide" aria-label="3 of 3">
         <img src="assets/img/gym/gym-1.webp" alt="Rows of racks and benches in the institute gym" loading="lazy">
         <figcaption><strong>The institute gym</strong><span>Modern machines, open morning and evening</span></figcaption>
       </figure>
     </div>
-    <button class="sl-btn prev" id="slPrev" aria-label="Previous slide"><svg class="ico"><use href="#i-left"/></svg></button>
-    <button class="sl-btn next" id="slNext" aria-label="Next slide"><svg class="ico"><use href="#i-right"/></svg></button>
-    <div class="dots" id="dots" role="group" aria-label="Choose slide"></div>
+    <button class="sl-btn prev" aria-label="Previous slide"><svg class="ico"><use href="#i-left"/></svg></button>
+    <button class="sl-btn next" aria-label="Next slide"><svg class="ico"><use href="#i-right"/></svg></button>
+    <div class="dots" role="group" aria-label="Choose slide"></div>
+  </div>
+
+  <!-- News and upcoming: one <article class="news-card"> per item, newest first.
+       Put the date (or "Coming soon") in .news-date. The strip slides on its own. -->
+  <div class="wrap news" aria-labelledby="newsTitle">
+    <div class="news-bar">
+      <h2 class="news-title" id="newsTitle">News and upcoming</h2>
+      <div class="news-nav">
+        <button class="news-btn" type="button" data-dir="-1" aria-label="Previous news"><svg class="ico"><use href="#i-left"/></svg></button>
+        <button class="news-btn" type="button" data-dir="1" aria-label="Next news"><svg class="ico"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+    <div class="news-track" data-news tabindex="0" aria-label="News items, scroll sideways for more">
+      <article class="news-card"><span class="news-date">Dates coming soon</span><h3>Meraz 6.0</h3><p>The annual techno-cultural fest of IIT Bhilai returns. Competitions, workshops, pronites and more.</p><a href="https://meraz.iitbhilai.ac.in/" target="_blank" rel="noopener">Meraz website <svg class="ico"><use href="#i-ext"/></svg></a></article>
+      <!-- <article class="news-card"><span class="news-date">2026-27</span><h3>Academic Calendar (Monsoon)</h3><p>Registration, classes, exams and breaks for the monsoon semester.</p><a href="https://www.iitbhilai.ac.in/index.php?pid=acad_course_2026_27M" target="_blank" rel="noopener">Open calendar <svg class="ico"><use href="#i-ext"/></svg></a></article> -->
+      <!-- <article class="news-card"><span class="news-date">January 2026</span><h3>New Hostel Manual and SOPs</h3><p>Updated hostel and mess rules, and the procedures for complaints, grievances and emergencies.</p><a href="assets/docs/Hostel%20Manual%20_Updated(new).pdf" target="_blank" rel="noopener">Read the manual</a></article> -->
+      <article class="news-card"><span class="news-date">Every year</span><h3>Anti-ragging undertaking</h3><p>Every student must submit the online anti-ragging undertaking each academic year.</p><a href="https://www.antiragging.in/" target="_blank" rel="noopener">Submit undertaking <svg class="ico"><use href="#i-ext"/></svg></a></article>
+      <article class="news-card"><span class="news-date">Yearly</span><h3>Prayatna</h3><p>The two-month inter-batch sports tournament, from chess and table tennis to football and athletics.</p><a href="sports.html#sports">Sports at IIT Bhilai</a></article>
+    </div>
   </div>
 
   <div class="wrap intro">
     <h2>Empowering Student Life</h2>
     <p class="lead">Hostels, clubs, sports and support. Everything you need to settle in, stay well and get involved at IIT Bhilai.</p>
     <div class="btns">
-      <a class="btn primary" href="#clubs">Explore clubs</a>
-      <a class="btn ghost" href="#forms">Forms and documents</a>
+      <a class="btn primary" href="cosa.html#clubs">Explore clubs</a>
+      <a class="btn ghost" href="resources.html">Forms and documents</a>
     </div>
-    
   </div>
 </section>
 
-<section id="people">
+<section id="motive" class="tint">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Who to approach</span>
-      <h2>People</h2>
-      <p class="lead">Approach the right person directly for quicker help.</p>
-    </div>
-
-    <p class="office-line">Office of Student Affairs: <a href="mailto:dosa@iitbhilai.ac.in">dosa@iitbhilai.ac.in</a> · <a href="tel:07882991608">0788-2991608</a></p>
-    <div class="hierarchy">
-    <p class="tier-label"><span>Dean of Student Affairs</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></p>
-    <div class="tier">
-        <article class="pcard xl key"><img src="assets/img/people/patra.webp" alt="" loading="lazy"><strong>Dr. Sudhanwa Patra</strong><small>Faculty-in-Charge, Dean of Student Affairs</small><a class="p-mail" href="mailto:dosa@iitbhilai.ac.in">dosa<wbr>@iitbhilai.ac.in</a></article>
-    </div>
-    <p class="tier-label"><span>Office of Student Affairs</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></p>
-    <div class="tier">
-      <article class="pcard lg"><img src="assets/img/people/pravin.webp" alt="" loading="lazy"><strong>Dr. Pravin P. Wararkar</strong><small>Deputy Registrar, DoSA</small><a class="p-mail" href="mailto:ardosa@iitbhilai.ac.in">ardosa<wbr>@iitbhilai.ac.in</a></article>
-    </div>
-    <p class="tier-label"><span>Faculty-in-Charge</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></p>
-    <div class="tier">
-        <article class="pcard"><img src="assets/img/people/pawan.webp" alt="" loading="lazy"><span class="p-org">Sports and NSO</span><strong>Dr. Pawan Kumar Mishra</strong><small>Faculty-in-Charge</small><a class="p-mail" href="mailto:pawan@iitbhilai.ac.in">pawan<wbr>@iitbhilai.ac.in</a></article>
-        <article class="pcard"><img src="assets/img/people/rahul.webp" alt="" loading="lazy"><span class="p-org">Career Planning (CCPS)</span><strong>Dr. Rahul Jain</strong><small>Faculty-in-Charge</small><a class="p-mail" href="mailto:headccps@iitbhilai.ac.in">headccps<wbr>@iitbhilai.ac.in</a></article>
-        <article class="pcard"><img src="assets/img/people/yshadangi.webp" alt="" loading="lazy"><span class="p-org">Mess (Pakadarpanalaya)</span><strong>Dr. Yagnesh Shadangi</strong><small>Faculty-in-Charge</small><a class="p-mail" href="mailto:messblock@iitbhilai.ac.in">messblock<wbr>@iitbhilai.ac.in</a></article>
-    </div>
-    <p class="tier-label"><span>Associate Faculty-in-Charge</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></p>
-    <div class="tier">
-        <article class="pcard"><img src="assets/img/people/lalitsahu.webp" alt="" loading="lazy"><span class="p-org">CCPS</span><strong>Dr. Lalit Sahu</strong><small>Associate Faculty-in-Charge</small><a class="p-mail" href="mailto:lalitsahu@iitbhilai.ac.in">lalitsahu<wbr>@iitbhilai.ac.in</a></article>
-        <article class="pcard"><img src="assets/img/people/nitanshuc.webp" alt="" loading="lazy"><span class="p-org">CCPS</span><strong>Dr. Nitanshu Chauhan</strong><small>Associate Faculty-in-Charge</small><a class="p-mail" href="mailto:nitanshuc@iitbhilai.ac.in">nitanshuc<wbr>@iitbhilai.ac.in</a></article>
-        <article class="pcard"><img src="assets/img/people/milanjena.webp" alt="" loading="lazy"><span class="p-org">Mess</span><strong>Dr. Milan Kumar Jena</strong><small>Associate Faculty-in-Charge</small><a class="p-mail" href="mailto:milanjena@iitbhilai.ac.in">milanjena<wbr>@iitbhilai.ac.in</a></article>
-    </div>
-    <p class="tier-label"><span>Hostel Wardens</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></p>
-    <div class="tier">
-        <article class="pcard"><img src="assets/img/people/hemant.webp" alt="" loading="lazy"><span class="p-org">Kanhar Hostel · BH-1</span><strong>Dr. Hemanta Kumar Kisan</strong><small>Warden</small><a class="p-mail" href="mailto:warden_kanhar@iitbhilai.ac.in">warden_kanhar<wbr>@iitbhilai.ac.in</a></article>
-        <article class="pcard"><img src="assets/img/people/yshadangi.webp" alt="" loading="lazy"><span class="p-org">Gopad Hostel · BH-2</span><strong>Dr. Yagnesh Shadangi</strong><small>Warden</small><a class="p-mail" href="mailto:warden_gopad@iitbhilai.ac.in">warden_gopad<wbr>@iitbhilai.ac.in</a></article>
-        <article class="pcard"><img src="assets/img/people/swati.webp" alt="" loading="lazy"><span class="p-org">Indravati Hostel · GH-1</span><strong>Dr. Swati Yadav</strong><small>Warden</small><a class="p-mail" href="mailto:warden_indravati@iitbhilai.ac.in">warden_indravati<wbr>@iitbhilai.ac.in</a></article>
-        <article class="pcard"><img src="assets/img/people/vivekr.webp" alt="" loading="lazy"><span class="p-org">Shivnath Hostel · MSH</span><strong>Dr. Vivek Raghuwanshi</strong><small>Warden</small><a class="p-mail" href="mailto:warden_shivnath@iitbhilai.ac.in">warden_shivnath<wbr>@iitbhilai.ac.in</a></article>
-    </div>
-    <p class="tier-label"><span>Associate Wardens</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></p>
-    <div class="tier small">
-        <article class="pcard"><img src="assets/img/people/nithin.webp" alt="" loading="lazy"><span class="p-org">Kanhar Hostel</span><strong>Dr. Nithin B</strong><small>Associate Warden</small></article>
-        <article class="pcard"><img src="assets/img/people/siddhardhak.webp" alt="" loading="lazy"><span class="p-org">Gopad Hostel</span><strong>Dr. Kedarisetty Siddhardha</strong><small>Associate Warden</small></article>
-        <article class="pcard"><img src="assets/img/people/torsha.webp" alt="" loading="lazy"><span class="p-org">Indravati Hostel</span><strong>Dr. Torsha Moitra</strong><small>Associate Warden</small></article>
-        <article class="pcard"><img src="assets/img/people/shobhitsingh.webp" alt="" loading="lazy"><span class="p-org">Shivnath Hostel</span><strong>Dr. Shobhit Pratap Singh</strong><small>Associate Warden</small></article>
-    </div>
-    <!-- <div class="person"><div class="avatar"><img src="assets/img/cosa/President.webp" alt="" loading="lazy"></div><p class="role">President, CoSA</p><p class="name">Arush Ranjan</p><a class="mail" href="mailto:President_CoSA@iitbhilai.ac.in">President_CoSA@iitbhilai.ac.in</a></div> -->
-    </div>
-    <p class="source">Sources: <a href="https://www.iitbhilai.ac.in/index.php?pid=institutional_responsibilities" target="_blank" rel="noopener">Institutional responsibilities</a> and <a href="https://www.iitbhilai.ac.in/index.php?pid=anti_ragging" target="_blank" rel="noopener">Anti-Ragging</a> pages, IIT Bhilai</p>
-  </div>
-</section>
-
-<section id="cosa" class="tint">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Power to the students</span>
-      <h2>Council of Student Affairs</h2>
-      <p class="lead">CoSA is the elected student council. It runs the cultural, sci-tech, sports and academic wings, and oversees every club and association on campus.</p>
-    </div>
-    <div class="cosa-top">
-      <div class="cosa-badge">
-        <img src="assets/img/logo/COSA.webp" alt="CoSA logo" loading="lazy">
-        <p>CoSA, IIT Bhilai</p>
-        <div class="btns" style="margin-top:18px"><a class="btn ghost" href="https://www.instagram.com/cosa_iitbhilai/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Follow CoSA</a></div>
+    <div class="motive">
+      <div class="motive-card">
+        <span class="eyebrow">Our motive</span>
+        <!-- <h3>A campus where every student can thrive</h3> -->
+        <!-- DRAFT: replace with the approved text -->
+        <!-- <p>The Office of Student Affairs looks after student life outside the classroom. We work to keep every student safe, healthy and supported, to give every student room to lead clubs, councils and fests, and to make the hostels a home away from home.</p> -->
       </div>
-      <blockquote class="quote">
-        <p>“The next few years are your opportunity to explore new interests. Join a club, try a new sport, work on an exciting project, and don't be afraid to make mistakes. That's how you grow.”</p>
-        <p>“As your Student Council, we are always here for you. We want to make sure you have a safe, enjoyable and fulfilling campus experience.”</p>
-        <footer><img src="assets/img/cosa/President.webp" alt="" loading="lazy"><span>Arush Ranjan<small>President, CoSA</small></span></footer>
-      </blockquote>
-    </div>
-
-    <div class="subhead"><h3>The council</h3><p>Write to a secretary directly for anything in their wing.</p></div>
-    <div class="council-grid">
-      <div class="team mini"><div class="member"><img src="assets/img/cosa/GenSec_Cult.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Andiyappan Rohan</strong><small>General Secretary, Culturals</small></div><a class="mail-ico" href="mailto:gensec_cultural_gymkhana@iitbhilai.ac.in" title="gensec_cultural_gymkhana@iitbhilai.ac.in" aria-label="Email Andiyappan Rohan, General Secretary, Culturals"><svg class="ico"><use href="#i-mail"/></svg></a></div></div>
-      <div class="team mini"><div class="member"><img src="assets/img/cosa/GenSec_SciTech.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Aditya Seokar</strong><small>General Secretary, Sci-Tech</small></div><a class="mail-ico" href="mailto:gensec_scitech_gymkhana@iitbhilai.ac.in" title="gensec_scitech_gymkhana@iitbhilai.ac.in" aria-label="Email Aditya Seokar, General Secretary, Sci-Tech"><svg class="ico"><use href="#i-mail"/></svg></a></div></div>
-      <div class="team mini"><div class="member"><img src="assets/img/cosa/GenSec_Sports.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Shubham Jha</strong><small>General Secretary, Sports</small></div><a class="mail-ico" href="mailto:gensec_sports_gymkhana@iitbhilai.ac.in" title="gensec_sports_gymkhana@iitbhilai.ac.in" aria-label="Email Shubham Jha, General Secretary, Sports"><svg class="ico"><use href="#i-mail"/></svg></a></div></div>
-      <div class="team mini"><div class="member"><img src="assets/img/cosa/GenSec_Acad.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Devanshu Sabharwal</strong><small>General Secretary, Academics</small></div><a class="mail-ico" href="mailto:gensec_academic_gymkhana@iitbhilai.ac.in" title="gensec_academic_gymkhana@iitbhilai.ac.in" aria-label="Email Devanshu Sabharwal, General Secretary, Academics"><svg class="ico"><use href="#i-mail"/></svg></a></div></div>
-      <div class="team mini"><div class="member"><img src="assets/img/cosa/EventsHead.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Utkarsh Kumar</strong><small>Events Head</small></div><a class="mail-ico" href="mailto:eventshead_cosa@iitbhilai.ac.in" title="eventshead_cosa@iitbhilai.ac.in" aria-label="Email Utkarsh Kumar, Events Head"><svg class="ico"><use href="#i-mail"/></svg></a></div></div>
-      <div class="team mini"><div class="member"><img src="assets/img/cosa/Treasurer.webp" alt="" loading="lazy" width="56" height="56"><div><strong>V. Varshitha</strong><small>Treasurer</small></div><a class="mail-ico" href="mailto:treasurer_cosa@iitbhilai.ac.in" title="treasurer_cosa@iitbhilai.ac.in" aria-label="Email V. Varshitha, Treasurer"><svg class="ico"><use href="#i-mail"/></svg></a></div></div>
-      <div class="team mini"><div class="member"><img src="assets/img/cosa/Outreach.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Stuti Jain</strong><small>Outreach Head</small></div><a class="mail-ico" href="mailto:outreach_cosa@iitbhilai.ac.in" title="outreach_cosa@iitbhilai.ac.in" aria-label="Email Stuti Jain, Outreach Head"><svg class="ico"><use href="#i-mail"/></svg></a></div></div>
-    </div>
-
-    <div class="subhead"><h3>Major council events</h3><p>The events that mark the student year.</p></div>
-    <div class="events">
-      <article class="event"><img src="assets/img/events/prayatna-1.webp" alt="Students competing at Prayatna" loading="lazy"><div><h4>Prayatna</h4><p>The flagship two-month inter-batch sports tournament, from chess and table tennis to football and athletics.</p></div></article>
-      <article class="event"><img src="assets/img/events/ciao-1.webp" alt="Freshers at Ciao" loading="lazy"><div><h4>Ciao</h4><p>The freshers' cultural welcome, where every club shows what it does and new students find their people.</p></div></article>
-      <article class="event"><img src="assets/img/events/anveshan-1.webp" alt="Performance at Anveshan" loading="lazy"><div><h4>Anveshan</h4><p>A week-long intra-institute cultural championship across music, dance, drama, fine arts, quizzing and more.</p></div></article>
-      <article class="event"><img src="assets/img/events/cultscape-1.webp" alt="Stage at Cultscape" loading="lazy"><div><h4>Cultscape</h4><p>The closing celebration of the cultural year, a stage for everyone's talent before the session ends.</p></div></article>
-    </div>
-    <p class="festivals">CoSA also brings the campus together for Diwali, Holi, Ganesh Chaturthi, Navratri, Janmashtami, Makar Sankranti kite flying, Gudi Padwa, Independence Day, Republic Day and New Year.</p>
-  </div>
-</section>
-<section id="meraz">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Cultural and technical festival</span>
-      <h2>Meraz</h2>
-      <p class="lead">The annual techno-cultural fest of IIT Bhilai.</p>
-    </div>
-
-    <div class="meraz-intro">
-      <div class="meraz-text">
-        <h4>Celebrating Innovation, Art and Creativity</h4>
-        <p>Meraz - the pulsating heart of IIT Bhilai — is where technology, art, and imagination unite to create an unforgettable celebration of innovation and culture. Evolving with each edition, Meraz has grown into a grand stage for talent, collaboration, and creative exploration. From cutting-edge tech showcases and coding battles to captivating performances, fashion artistry, and culinary flair, Meraz embraces every shade of human creativity.</p>
-      </div>
-
-      <div class="meraz-video">
-        <iframe src="https://www.youtube-nocookie.com/embed/ztJsklsTg8M?rel=0" title="Meraz video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-
-    <div class="meraz-gallery">
-      <img src="assets/img/meraz/events-3.jpg" alt="Event at Meraz" loading="lazy">
-      <img src="assets/img/meraz/roadshow-3.webp" alt="Meraz roadshow" loading="lazy">
-      <img src="assets/img/meraz/robokabaddi-1.webp" alt="Robo-Kabaddi at Meraz" loading="lazy">
-      <img src="assets/img/meraz/pronites-2.webp" alt="Pronite at Meraz" loading="lazy">
-      <img src="assets/img/meraz/pronites-4.webp" alt="Pronite at Meraz" loading="lazy">
-      <img src="assets/img/meraz/pronites-5.webp" alt="Pronite at Meraz" loading="lazy">
-      <img src="assets/img/meraz/pronites-6.webp" alt="Pronite at Meraz" loading="lazy">
-      <img src="assets/img/meraz/attire_spectra-2.webp" alt="Attire Spectra fashion show at Meraz" loading="lazy">
-      <img src="assets/img/meraz/attire_spectra-5.webp" alt="Attire Spectra fashion show at Meraz" loading="lazy">
-      <img src="assets/img/meraz/attire_spectra-11.webp" alt="Attire Spectra fashion show at Meraz" loading="lazy">
-      <img src="assets/img/meraz/attire_spectra-9.webp" alt="Attire Spectra fashion show at Meraz" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<section id="clubs">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Find your people</span>
-      <h2>Clubs</h2>
-      <p class="lead">Student-run clubs under CoSA. Pick one that matches your interests, or try a few in your first semester.</p>
-    </div>
-    <div class="chips" role="group" aria-label="Filter clubs">
-      <button class="chip" data-filter="all" aria-pressed="true">All</button>
-      <button class="chip" data-filter="cultural" aria-pressed="false">Cultural</button>
-      <button class="chip" data-filter="scitech" aria-pressed="false">Sci-Tech</button>
-      <button class="chip" data-filter="society" aria-pressed="false">Societies</button>
-    </div>
-    <div class="clubs" id="clubList" data-limit="8" data-noun="clubs" data-no-collapse>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/renaissance.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>Renaissance</h3></div></div><p>The fine arts club. Painting, sketching and craft, with a space to express ideas through artwork and discover hidden talents.</p><div class="links"><a href="https://instagram.com/renaissance_iitbh" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/beathackers.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>Beathackers</h3></div></div><p>The official dance club, for everyone whose feet start moving when the bass drops, from beginners to stage regulars.</p><div class="links"><a href="https://instagram.com/beathackers_iitbhilai" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/drishya.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>Drishya</h3></div></div><p>The dramatics society and the first cultural club on campus. Stage plays, street plays and everything theatre.</p><div class="links"><a href="https://instagram.com/drishya_iitbhilai" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/quiz.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>Quizzotica</h3></div></div><p>The quizzing club. Science, history, pop culture, sports and current affairs, in friendly but fierce battles of knowledge.</p><div class="links"><a href="https://instagram.com/quizzotica_iitbh" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/swara.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>Swara</h3></div></div><p>The music club for singers and instrumentalists, from classical and folk to rock and contemporary.</p><div class="links"><a href="https://instagram.com/swara_iitbh" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/tps.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>The Pixel Snappers</h3></div></div><p>The photography club. Portraits, landscapes, street and event shoots that capture the moments of campus life.</p><div class="links"><a href="https://www.instagram.com/thepixelsnappers/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/designX.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>DesignX</h3></div></div><p>The digital arts club. Graphic design, UI/UX, branding and visual storytelling.</p><div class="links"><a href="https://instagram.com/designx_iitbhilai" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/EBSB.webp" alt="" loading="lazy"><div><span class="tag">Cultural</span><h3>Ek Bharat Shreshtha Bharat</h3></div></div><p>A national initiative for cultural exchange, bringing the traditions, food and languages of paired states to campus.</p><div class="links"><a href="https://www.instagram.com/ebsbiitbhilai" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="cultural"><div class="club-head"><img src="assets/img/logo/SPIC_MACAY.webp" alt="" loading="lazy"><div><span class="tag">Heritage Club</span><h3>SPIC MACAY</h3></div></div><p>The heritage club, promoting Indian classical music, dance and culture through concerts and workshops.</p><div class="links"><a href="https://www.instagram.com/spicmacayofficial" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/gdsc.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Developer Student Club</h3></div></div><p>Peer learning in app and web development, cloud and open source, with real-world projects.</p><div class="links"><a href="https://dsc.iitbhilai.ac.in/aboutus.php" target="_blank" rel="noopener"><svg class="ico"><use href="#i-web"/></svg>Website</a><a href="https://www.instagram.com/dsc_iitbhilai/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/ses.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Space Exploration Society</h3></div></div><p>Astronomy and aeronautics, from telescope nights to RC planes, drones and drone swarms.</p><div class="links"><a href="https://instagram.com/ses_iitbh" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/Electromos.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Electromos</h3></div></div><p>The electronics club. Hands-on circuits, embedded systems and automation for real-life problems.</p></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/ingenuity.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Ingenuity</h3></div></div><p>The competitive programming club, building the coding culture on campus through contests and problem-solving sessions.</p><div class="links"><a href="https://www.instagram.com/ingenuity_iit_bh/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/epsilon.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Epsilon</h3></div></div><p>The robotics and mechatronics club. Imagine, invent, inspire.</p><div class="links"><a href="https://roboticsclub.iitbhilai.ac.in/index.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-web"/></svg>Website</a><a href="https://www.instagram.com/roboticsclub_iitbhilai/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/OpenLake.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>OpenLake</h3></div></div><p>The open-source society, guiding students towards real software engineering and global open-source programmes.</p><div class="links"><a href="https://instagram.com/openlake_iitbhilai" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/DSAI.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Data Science and AI Club</h3></div></div><p>Hands-on projects, research and workshops in data science, machine learning and AI.</p><div class="links"><a href="https://www.instagram.com/dsai_iitbhilai/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/BIB.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Blockchain at IIT Bhilai</h3></div></div><p>The Web3 and blockchain community, exploring and building decentralised technologies.</p><div class="links"><a href="https://www.instagram.com/blockchain_iitbh/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/Spectre.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Spectre</h3></div></div><p>The cybersecurity club. CTFs, hands-on sessions and the mindset to tackle modern security challenges.</p><div class="links"><a href="https://www.instagram.com/spectre_iitbhilai/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="scitech"><div class="club-head"><img src="assets/img/logo/Motorsports.webp" alt="" loading="lazy"><div><span class="tag">Sci-Tech</span><h3>Motorsports Society
-      </h3></div></div><p>The automotive club: design, analysis and manufacturing of competition vehicles.</p><div class="links"><a href="https://www.instagram.com/iitbhilaimotorsports/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-
-      <article class="club" data-cat="society"><div class="club-head"><img src="assets/img/logo/ext_aff.webp" alt="" loading="lazy"><div><span class="tag">Society</span><h3>OutReach CoSA</h3></div></div><p>The link between campus and the outside world: sponsors, media, guest speakers and publicity for Meraz and other events.</p><div class="links"><a href="mailto:outreach_cosa@iitbhilai.ac.in"><svg class="ico"><use href="#i-mail"/></svg>Email</a></div></article>
-      <article class="club" data-cat="society"><div class="club-head"><img src="assets/img/logo/fintech.webp" alt="" loading="lazy"><div><span class="tag">Society</span><h3>FinTech Society</h3></div></div><p>Markets, blockchain, digital payments and algorithmic trading, through workshops, trading simulations and speaker sessions.</p><div class="links"><a href="https://www.instagram.com/fintech_iitbh/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      <article class="club" data-cat="society"><div class="club-head"><img src="assets/img/logo/ecell.webp" alt="" loading="lazy"><div><span class="tag">Society</span><h3>E-Cell</h3></div></div><p>The entrepreneurship cell. Founder talks, startup discussions, E-Conclave and mentorship for aspiring founders.</p><div class="links"><a href="https://www.instagram.com/ecell_iitbh/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a></div></article>
-      
-    </div>
-  </div>
-</section>
-
-<section id="sports">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Healthy mind, healthy body</span>
-      <h2>Sports</h2>
-      <p class="lead">Grounds, courts and coaching for every level, from casual evening games to the teams that represent IIT Bhilai at the Inter-IIT Sports Meet.</p>
-    </div>
-    <div class="sports" data-limit="5" data-noun="sports" data-no-collapse>
-      <article class="sport"><img src="assets/img/sports/cricket.webp" alt="Cricket match on the institute ground" loading="lazy"><div><h3>Cricket</h3><p>A maintained pitch, practice nets and floodlights for evening sessions.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/football.webp" alt="Football team on the field" loading="lazy"><div><h3>Football</h3><p>Open field and a squad that plays at the Inter-IIT Sports Meet every year.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/basketball.webp" alt="Basketball game on the outdoor court" loading="lazy"><div><h3>Basketball</h3><p>Outdoor courts and a club that welcomes newcomers, whatever their level.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/volleyball.webp" alt="Volleyball players at the net" loading="lazy"><div><h3>Volleyball</h3><p>Men's and women's teams with strong Inter-IIT showings.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/badminton.webp" alt="Badminton on an indoor court" loading="lazy"><div><h3>Badminton</h3><p>Two indoor courts in every hostel, with rackets available.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/table-tennis.webp" alt="Table tennis rally" loading="lazy"><div><h3>Table tennis</h3><p>Fast, focused and strategic, with tables in the hostels.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/athletics.webp" alt="Athletes on the track" loading="lazy"><div><h3>Athletics</h3><p>Track and field training on the main ground, the venue for Inter-IIT preparation and Prayatna.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/chess.webp" alt="Students playing chess" loading="lazy"><div><h3>Chess</h3><p>Regular tournaments and casual games for players of every rating.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/yoga.webp" alt="Group yoga session" loading="lazy"><div><h3>Yoga</h3><p>Sessions to build strength and flexibility, and to unwind from academic stress.</p></div></article>
-      <article class="sport"><img src="assets/img/sports/recreational.webp" alt="Students playing kabaddi" loading="lazy"><div><h3>Recreational sports</h3><p>Kabaddi, kho kho, dodgeball, frisbee, carrom and more, just for fun.</p></div></article>
-    </div>
-    <p class="loc center"><svg class="ico"><use href="#i-pin"/></svg><span><b>Main ground</b> (cricket, football and athletics): behind Shivnath Hostel (MSH). <b>Badminton and table tennis</b>: inside every hostel.</span></p>
-    <p class="note"><strong>Prayatna</strong>, the flagship inter-batch sports tournament, runs for two months every year. Selections for the Inter-IIT Sports Meet happen through the Sports Council.</p>
-    <div class="btns">
-      <a class="btn primary" href="https://sportsandyoga.iitbhilai.ac.in/index.html" target="_blank" rel="noopener">Sports and Yoga website <svg class="ico"><use href="#i-ext"/></svg></a>
-      <!-- <a class="btn ghost" href="https://sportsandyoga.iitbhilai.ac.in/index.html#contact-us" target="_blank" rel="noopener">Contact the sports office <svg class="ico"><use href="#i-ext"/></svg></a> -->
-    </div>
-  </div>
-</section>
-
-<section id="gym" class="tint">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Sports · Gym</span>
-      <h2>The Gym</h2>
-      <p class="lead">A bright, fully equipped gym open to every student. Here's what's waiting for you.</p>
-    </div>
-    <div class="gym-facts">
-      <div><strong>5:30 – 9:30 am</strong><span>Morning slot</span></div>
-      <div><strong>5:00 – 10:00 pm</strong><span>Evening slot</span></div>
-      <div><strong>Hostel workout areas</strong><span>Free weights, a Smith machine and a cable station, close to your room</span></div>
-    </div>
-    <div class="equip" data-gallery="gym" data-limit="7" data-noun="gym photos">
-      <button class="tile wide" type="button"><img src="assets/img/gym/gm8.webp" alt="Main gym floor with racks, machines and dumbbells" loading="lazy"><span class="cap">The main floor</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gym-2.webp" alt="Leg press and hack squat machines" loading="lazy"><span class="cap">Leg press and hack squat</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gm1.webp" alt="Leg extension and leg curl machine" loading="lazy"><span class="cap">Leg extension and leg curl</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gm4.webp" alt="Cable station with adjustable pulleys" loading="lazy"><span class="cap">Cable station</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gm6.webp" alt="Plate-loaded press machine" loading="lazy"><span class="cap">Plate-loaded press</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gym-1.webp" alt="Racks and benches lined up" loading="lazy"><span class="cap">Racks and benches</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gm2.webp" alt="Rack of hex dumbbells" loading="lazy"><span class="cap">Dumbbell rack</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gm5.webp" alt="Adjustable bench with barbells" loading="lazy"><span class="cap">Adjustable bench and barbells</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gm3.webp" alt="Weight plates on a plate tree" loading="lazy"><span class="cap">Weight plates</span></button>
-      <button class="tile" type="button"><img src="assets/img/gym/gm7.webp" alt="Open floor with mats and free weights" loading="lazy"><span class="cap">Free-weight zone</span></button>
-    </div>
-    <div class="kit">
-      <div><h4>Cardio</h4><ul><li>Treadmills</li><li>Exercise bikes</li><li>Rowing machine</li></ul></div>
-      <div><h4>Machines</h4><ul><li>Leg press</li><li>Hack squat</li><li>Leg extension</li><li>Leg curl</li><li>Shoulder press</li><li>Smith machine</li><li>Cable station</li><li>Lat pulldown</li><li>Dip and knee-raise station</li></ul></div>
-      <div><h4>Free weights</h4><ul><li>Dumbbells</li><li>Barbells</li><li>EZ bar</li><li>Bench press</li><li>Incline benches</li><li>Deadlift platform</li><li>Preacher curl</li><li>Yoga mats</li></ul></div>
-    </div>
-    <p class="note"><strong>New to lifting?</strong> Ask the gym team on duty to show you around. Carry a towel and wear clean indoor shoes.</p>
-  </div>
-</section>
-
-<section id="hostels">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">A home away from home</span>
-      <h2>Hostels</h2>
-      <p class="lead">Every student lives on campus in air-conditioned, Wi-Fi-enabled hostels with fully furnished rooms.</p>
-    </div>
-    <div class="hostel-intro">
-      <figure class="drone">
-        <video class="lazy-video" data-src="assets/video/hostels-drone-night.mp4" poster="assets/img/hostel/hostels-drone-poster.webp" muted loop playsinline controls preload="none" width="952" height="536" aria-label="Drone view of the hostel zone at night"></video>
-        <figcaption>The hostel zone at night, from a drone</figcaption>
+      <figure class="dean-msg">
+        <img src="assets/img/people/patra.webp" alt="Dr. Sudhanwa Patra" loading="lazy">
+        <blockquote>
+          <span class="eyebrow">From the Dean's desk</span>
+          <!-- Paste the Dean's message here, one <p> per paragraph -->
+          <p class="pending">Sir Message.</p>
+          <footer>Dr. Sudhanwa Patra<small>Faculty-in-Charge, Dean of Student Affairs</small></footer>
+        </blockquote>
       </figure>
-      <div>
-        <h3>Four hostels, one campus family</h3>
-        <p>Kanhar and Gopad for boys, Indravati for girls, and Shivnath: each with its own warden team, indoor badminton courts, a common kitchen and recreation rooms, a short walk from the mess and the academic zone.</p>
-      </div>
-    </div>
-    <div class="hostels">
-      <article class="hostel"><div class="h-photo"><img src="assets/img/hostel/kanhar-front.webp" alt="Kanhar Hostel building" loading="lazy"><span class="code">BH-1</span></div><div class="h-body"><h3>Kanhar Hostel</h3><dl><dt>For</dt><dd>Boys</dd><dt>Capacity</dt><dd>476 + 12 PWD</dd></dl><div class="h-staff"><div class="member"><img src="assets/img/people/hemant.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Hemanta Kumar Kisan</strong><small>Warden</small><a href="mailto:warden_kanhar@iitbhilai.ac.in">warden_kanhar<wbr>@iitbhilai.ac.in</a></div></div><div class="member"><img src="assets/img/people/nithin.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Nithin B</strong><small>Associate Warden</small></div></div></div></div></article>
-      <article class="hostel"><div class="h-photo"><div class="h-ph" aria-hidden="true"><span></span><small></small></div><span class="code">BH-2</span></div><div class="h-body"><h3>Gopad Hostel</h3><dl><dt>For</dt><dd>Boys</dd><dt>Capacity</dt><dd>486 + 12 PWD</dd><dt>Café</dt><dd><a href="https://maps.app.goo.gl/yW3CesEA8t32nkeQA" target="_blank" rel="noopener">Tech Cafe</a></dd></dl><div class="h-staff"><div class="member"><img src="assets/img/people/yshadangi.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Yagnesh Shadangi</strong><small>Warden</small><a href="mailto:warden_gopad@iitbhilai.ac.in">warden_gopad<wbr>@iitbhilai.ac.in</a></div></div><div class="member"><img src="assets/img/people/siddhardhak.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Kedarisetty Siddhardha</strong><small>Associate Warden</small></div></div></div></div></article>
-      <article class="hostel girls"><div class="h-photo"><img src="assets/img/hostel/indravati-front.webp" alt="Indravati Hostel entrance" loading="lazy"><span class="code">GH-1</span></div><div class="h-body"><h3>Indravati Hostel</h3><dl><dt>For</dt><dd>Girls</dd><dt>Capacity</dt><dd>316 + 8 PWD</dd><dt>Café</dt><dd><a href="https://maps.app.goo.gl/kh7XkwrHYYshbkfF7" target="_blank" rel="noopener">Not Just Coffee (NJC)</a></dd></dl><div class="h-staff"><div class="member"><img src="assets/img/people/swati.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Swati Yadav</strong><small>Warden</small><a href="mailto:warden_indravati@iitbhilai.ac.in">warden_indravati<wbr>@iitbhilai.ac.in</a></div></div><div class="member"><img src="assets/img/people/torsha.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Torsha Moitra</strong><small>Associate Warden</small></div></div></div></div></article>
-      <article class="hostel first"><div class="h-photo"><div class="h-ph" aria-hidden="true"><span></span><small></small></div><span class="code">MSH</span></div><div class="h-body"><h3>Shivnath Hostel</h3><dl><dt>For</dt><dd>First-year students</dd><dt>Nearby</dt><dd>Main sports ground</dd></dl><div class="h-staff"><div class="member"><img src="assets/img/people/vivekr.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Vivek Raghuwanshi</strong><small>Warden</small><a href="mailto:warden_shivnath@iitbhilai.ac.in">warden_shivnath<wbr>@iitbhilai.ac.in</a></div></div><div class="member"><img src="assets/img/people/shobhitsingh.webp" alt="" loading="lazy" width="56" height="56"><div><strong>Dr. Shobhit Pratap Singh</strong><small>Associate Warden</small></div></div></div></div></article>
-    </div>
-
-    <div class="amenities" data-limit="4" data-noun="amenities">
-      <div class="amenity"><h4>Rooms</h4><p>Single and double occupancy, each with a bed and mattress, study table, chair, almirah and fan.</p></div>
-      <div class="amenity"><h4>Air conditioning</h4><p>Hostel premises are air-conditioned to beat the Chhattisgarh summer.</p></div>
-      <!-- <div class="amenity"><h4>Internet</h4><p>LAN in every room plus Wi-Fi over the National Knowledge Network, at up to 1 Gbps.</p></div> -->
-      <div class="amenity"><h4>Mess and cafés</h4><p>Pakadarpanalaya, the central mess, serves four meals a day. <a href="#mess">Timings and location</a>.</p></div>
-      <div class="amenity"><h4>Recreation</h4><p>TV rooms, a music room with drums, keyboard and guitars, indoor badminton and table tennis.</p></div>
-      <div class="amenity"><h4>Common kitchen</h4><p>Every hostel has a shared kitchen for residents.</p></div>
-      <div class="amenity"><h4>Sushrut Bhawan</h4><p>A 24/7 health centre with an ambulance, and first-aid boxes in every hostel.</p></div>
-      <div class="amenity"><h4>Getting around</h4><p>Roads, pedestrian paths and cycling tracks connect every part of campus.</p></div>
-    </div>
-
-    <div class="manual-note">
-      <div>
-        <span class="doc-type">From the DoSA office</span>
-        <h3>Read the Hostel Manual and follow the SOPs</h3>
-        <p>The Hostel Manual (January 2026) sets out hostel and mess rules and the Standard Operating Procedures for complaints, grievances and emergencies. Raise routine matters at your hostel first, and avoid mass mailing. Genuine grievances will always be heard, and emergencies should be reported immediately.</p>
-      </div>
-      <a class="btn gold" href="assets/docs/Hostel%20Manual%20_Updated(new).pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Hostel Manual (PDF)</a>
-    </div>
-
-    <div class="subhead"><h3>Raising a hostel complaint</h3><p>For maintenance, housekeeping, Wi-Fi, plumbing, electrical, furniture, water supply and other routine issues.</p></div>
-    <ol class="steps">
-      <li><strong>Report it at your hostel</strong><span>Use the hostel complaint register, visit the hostel office, or email your hostel office (below).</span></li>
-      <li><strong>If not fixed within a week?</strong><span>Escalate through the channel in the Hostel Manual SOP, starting with your hostel's warden.</span></li>
-      <li><strong>Emergency? Don't wait</strong><span>For fire, medical, electrical, security, violence or ragging, go straight to hostel staff, security, your warden or the DoSA office if needed.</span></li>
-    </ol>
-    
-
-    <div class="subhead"><h3>Hostel rules at a glance</h3><p>A summary only. The Hostel Manual is the final word.</p></div>
-    <div class="acc">
-      <details><summary>Grievances</summary><p>Grievances about hostel administration, allocation, discipline, mess administration, staff behaviour, harassment, discrimination or hostel policy can be raised through the grievance SOP. Every grievance is kept confidential, no student will face retaliation for a genuine complaint, and anonymous complaints may be considered if backed by sufficient evidence.</p></details>
-      <details><summary>Timings and visitors</summary><p>Hostel residents may not stay out of campus between 11 pm and 6 am. Visitors, including parents, sign the visitors' book at the gate and may use only common areas between 7 am and 9 pm. Students visiting a hostel of the opposite gender are allowed only in common areas, until 10 pm. Hostel sports areas are open until 10 pm.</p></details>
-      <details><summary>Leaving the campus</summary><p>Submit <a href="assets/docs/form-HO-02-leaving-campus.pdf" target="_blank" rel="noopener">Form HO-02</a> to your hostel office at least one day before you leave. MTech and PhD students attach their approved academic leave. Mark exit and entry in the hostel register and at the biometric gates, and always carry your ID card.</p></details>
-      <details><summary>In your room</summary><p>Rooms are allotted by the hostel office, and room changes need the warden's permission. Personal kettles, heaters, irons, induction plates, fans, fridges and ACs are not allowed. Get your room cleaned by housekeeping at least twice a week, and never go onto the rooftop or terrace.</p></details>
-      <details><summary>Zero tolerance</summary><p>Smoking, alcohol, drugs and ragging are strictly prohibited, with fines and referral to the disciplinary committee. Report any such activity to hostel staff or your warden. Your identity will be kept confidential.</p></details>
-      <details><summary>Health and wellbeing</summary><p>Report any illness or accident to the hostel office and health centre straight away (Health Centre <a href="tel:07882991612">07882991612</a> or <a href="tel:09424283691">09424283691</a>, ambulance <a href="tel:07647068419">07647068419</a>). For stress, anxiety or low mood, the Institute Counselling Services and Health Centre are there to help, in confidence.</p></details>
-      <details><summary>Penalties and appeals</summary><p>Violations can bring fines, set out in the manual, and repeated or serious ones go to the disciplinary committee. Appeals against a penalty must normally be made within seven working days of the order.</p></details>
-    </div>
-  </div>
-</section>
-
-<section id="mess" class="tint">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Hostels · Mess</span>
-      <h2>Mess</h2>
-      <p class="lead">Pakadarpanalaya, the central mess, serves breakfast, lunch, snacks and dinner to every student on campus.</p>
-    </div>
-    <div class="meals">
-      <div><span>Breakfast</span><strong>8:00 – 10:00 am</strong></div>
-      <div><span>Lunch</span><strong>12:30 – 2:30 pm</strong></div>
-      <div><span>Snacks</span><strong>5:00 – 6:00 pm</strong></div>
-      <div><span>Dinner</span><strong>8:00 – 10:00 pm</strong></div>
-    </div>
-    <div class="mess">
-      <div class="mess-copy">
-        <h3>Caterers and counters</h3>
-        <ul class="pills">
-          <li>Galav Foods</li>
-          <li>Shree Sai Services</li>
-          <li>Krishna Kripa (pure veg, sattvic)</li>
-          <li>Amul Parlour</li>
-        </ul>
-        <div class="intranet">
-          <span class="badge-lock"><svg class="ico"><use href="#i-lock"/></svg>Intranet only</span>
-          <p>The daily and weekly menu, the mess committee and the complaints desk are on the mess website, <a href="https://mess.iitbhilai.ac.in/" target="_blank" rel="noopener"><b>mess.iitbhilai.ac.in</b></a>. It opens only on the campus network, so connect to hostel LAN or campus Wi-Fi first.</p>
-        </div>
-        <p class="muted">Questions or feedback: <a href="mailto:messcoordinator@iitbhilai.ac.in">messcoordinator@iitbhilai.ac.in</a><br>Faculty-in-Charge, Mess: <a href="mailto:messblock@iitbhilai.ac.in">messblock@iitbhilai.ac.in</a></p>
-      </div>
-      <div class="loc-card">
-        <iframe title="Map showing the mess block at IIT Bhilai" src="https://www.google.com/maps?q=Mess+Block,+IIT+Bhilai,+Kutelabhata,+Bhilai&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div>
-          <p class="loc"><svg class="ico"><use href="#i-pin"/></svg><span><b>Location:</b> Mess Block (Pakadarpanalaya), IIT Bhilai campus, Kutelabhata, Durg 491002</span></p>
-          <a class="maplink" href="https://maps.app.goo.gl/VnPGnJqzifBFkQjk9" target="_blank" rel="noopener">Open in Google Maps <svg class="ico"><use href="#i-ext"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="subhead"><h3>Inside the mess</h3></div>
-    <div class="gallery" data-gallery="mess" data-limit="5" data-noun="mess photos">
-      <button class="tile" type="button"><img src="assets/img/mess/pakadarpanalaya.webp" alt="Pakadarpanalaya sign on the mess building" loading="lazy"><span class="cap">Pakadarpanalaya</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/mess-entrance.webp" alt="Main entrance of the mess block" loading="lazy"><span class="cap">Mess entrance</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/mess-lobby.webp" alt="Entrance lobby inside the mess" loading="lazy"><span class="cap">Entrance lobby</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/galav-dining.webp" alt="Galav Foods dining hall" loading="lazy"><span class="cap">Galav Foods dining hall</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/shree-sai-dining.webp" alt="Shree Sai Services dining hall" loading="lazy"><span class="cap">Shree Sai dining hall</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/krishna-kripa.webp" alt="Krishna Kripa food counter" loading="lazy"><span class="cap">Krishna Kripa</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/amul-parlour.webp" alt="Amul Parlour counter" loading="lazy"><span class="cap">Amul Parlour</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/millet-stall.webp" alt="Decorated millet food stall at the mess" loading="lazy"><span class="cap"></span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/mess-wall-art.webp" alt="Metal wall art inside the mess" loading="lazy"><span class="cap">Wall art</span></button>
-      <button class="tile" type="button"><img src="assets/img/mess/mess-night.webp" alt="Path beside the mess at night" loading="lazy"><span class="cap">The mess at night</span></button>
-    </div>
-
-    <details class="more">
-      <summary>Food around campus: cafés and counters</summary>
-      <ul class="spots">
-      <li><strong>Tech Cafe</strong><span>Samosa, pasta, Maggi, pizza and shakes</span><a href="https://maps.app.goo.gl/yW3CesEA8t32nkeQA" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Gopad Hostel</a></li>
-      <li><strong>Not Just Coffee (NJC)</strong><span>Coffee, shakes, biryani, poha and noodles</span><a href="https://maps.app.goo.gl/kh7XkwrHYYshbkfF7" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Indravati Hostel</a></li>
-      <li><strong>Krishna Kripa</strong><span>Fresh juice, snacks, cakes and momos</span><a href="https://maps.app.goo.gl/LaxoN9DGHjT82xC89" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Inside the mess</a></li>
-      <li><strong>Amul Parlour</strong><span>Milk, ice cream and milkshakes</span><a href="https://maps.app.goo.gl/mLPuZzzun9enRyLHA" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Inside the mess</a></li>
-      <li><strong>Crazy Cake &amp; Bakers</strong><span>Cakes, pastries, dosa and ice cream</span><a href="https://maps.app.goo.gl/CNkj8wCPraJ2q9xW7" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Shopping complex</a></li>
-    </ul>
-    </details>
-  </div>
-</section>
-
-<section id="gallery">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Hostels · Gallery</span>
-      <h2>Gallery</h2>
-      <p class="lead">A look inside the hostels and the facilities around them.</p>
-    </div>
-    
-    <!-- To add photos: drop images in assets/img/hostel/ and add a tile with the matching data-cat
-         (kanhar, gopad, indravati, shivnath or facility). -->
-    <div class="gallery" id="galleryGrid" data-gallery="hostels" data-limit="8" data-noun="photos">
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/hostel-zone.webp" alt="Aerial view of the hostel zone" loading="lazy"><span class="cap">Hostel zone from above</span></button>
-      <button class="tile" type="button" data-cat="kanhar"><img src="assets/img/hostel/kanhar.webp" alt="Kanhar Hostel building exterior" loading="lazy"><span class="cap">Kanhar Hostel (BH-1)</span></button>
-      <button class="tile" type="button" data-cat="indravati"><img src="assets/img/hostel/indravati-front.webp" alt="Front of Indravati Hostel" loading="lazy"><span class="cap">Indravati Hostel (GH-1)</span></button>
-      <button class="tile" type="button" data-cat="indravati"><img src="assets/img/hostel/indravati-lobby.webp" alt="Entrance lobby of Indravati Hostel" loading="lazy"><span class="cap">Indravati Hostel lobby</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/1.webp" alt="Hostel courtyard lit up at night" loading="lazy"><span class="cap">Hostel courtyard at night</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/7.webp" alt="Badminton court in a hostel courtyard" loading="lazy"><span class="cap">Courtyard badminton court</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/6.webp" alt="Student studying in an air-conditioned hostel room" loading="lazy"><span class="cap">A hostel room</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/12.webp" alt="View of the campus from a hostel balcony" loading="lazy"><span class="cap">View from the balcony</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/5.webp" alt="Covered cycle stand with bicycles" loading="lazy"><span class="cap">Cycle stand</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/13.webp" alt="Separate cycling and walking paths" loading="lazy"><span class="cap">Cycling tracks</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/hostel/14.webp" alt="Tree-lined walkway at dusk" loading="lazy"><span class="cap">Evening walkways</span></button>
-      <button class="tile" type="button" data-cat="facility"><img src="assets/img/gym/gm7.webp" alt="Institute gym floor" loading="lazy"><span class="cap">Institute gym</span></button>
-      <div class="gallery-empty" id="galleryEmpty" hidden><strong>Photos coming soon</strong>We're adding photos of this hostel. Check back shortly.</div>
-    </div>
-  </div>
-</section>
-
-<section id="anti-ragging" class="tint">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Zero tolerance</span>
-      <h2>Anti-Ragging</h2>
-      <p class="lead">Ragging has no place at IIT Bhilai. It is a criminal offence under UGC regulations, and every complaint is acted on.</p>
-    </div>
-    <div class="alert">
-      <div>
-        <h3>Facing or witnessing ragging?</h3>
-        <p>Report it right away to any member of the Anti-Ragging Committee, your warden, or the national helpline. Your identity will be protected.</p>
-      </div>
-      <div class="helpline">
-        <small>National Anti-Ragging Helpline (24x7, toll free)</small>
-        <a href="tel:18001805522">1800-180-5522</a>
-        <a class="mail" href="mailto:helpline@antiragging.in">helpline@antiragging.in</a>
-        <small class="hostel-lines">Boys hostel: <a href="tel:+919407766178">+91 94077 66178</a><br>Girls hostel: <a href="tel:+919406256993">+91 94062 56993</a></small>
-      </div>
-    </div>
-    <div class="ar-grid">
-      <div class="ar-card committee">
-        <h3>Anti-Ragging Committee</h3>
-        <ul>
-          <li>Dr. Sudhanwa Patra, Faculty-in-Charge, DoSA (Chairman)<br><a href="mailto:dosa@iitbhilai.ac.in">dosa@iitbhilai.ac.in</a></li>
-          <li>Dr. Kuldeep Kumar Kataria, Faculty-in-Charge, DoAA<br><a href="mailto:doaa@iitbhilai.ac.in">doaa@iitbhilai.ac.in</a></li>
-          <li>Dr. Souradyuti Paul, Faculty-in-Charge, Campus Safety<br><a href="mailto:souradyuti@iitbhilai.ac.in">souradyuti@iitbhilai.ac.in</a></li>
-          <li>Dr. Hemanta Kumar Kisan, Warden, Kanhar Hostel<br><a href="mailto:warden_kanhar@iitbhilai.ac.in">warden_kanhar@iitbhilai.ac.in</a></li>
-          <li>Dr. Yagnesh Shadangi, Warden, Gopad Hostel<br><a href="mailto:warden_gopad@iitbhilai.ac.in">warden_gopad@iitbhilai.ac.in</a></li>
-          <li>Dr. Swati Yadav, Warden, Indravati Hostel<br><a href="mailto:warden_indravati@iitbhilai.ac.in">warden_indravati@iitbhilai.ac.in</a></li>
-          <li>Dr. Vivek Raghuwanshi, Warden, Shivnath Hostel<br><a href="mailto:warden_shivnath@iitbhilai.ac.in">warden_shivnath@iitbhilai.ac.in</a></li>
-          <li>Dr. Pravin P. Wararkar, Deputy Registrar, DoSA<br><a href="mailto:ardosa@iitbhilai.ac.in">ardosa@iitbhilai.ac.in</a></li>
-          <li>Dr. Atul Prakash Srivastava, Medical Officer<br><a href="mailto:atulps@iitbhilai.ac.in">atulps@iitbhilai.ac.in</a></li>
-          <li>President, CoSA, and a fresher student representative<br><a href="mailto:President_CoSA@iitbhilai.ac.in">President_CoSA@iitbhilai.ac.in</a></li>
-        </ul>
-        <p class="ar-note">The <b>Anti-Ragging Squad</b> (the associate wardens, hostel staff of all four hostels and the Assistant Security Officer) patrols hostels and conducts surprise checks.</p>
-      </div>
-      <div class="ar-card">
-        <h3>What counts as ragging</h3>
-        <ul>
-          <li>Physical or psychological humiliation of any student</li>
-          <li>Teasing, abuse or forcing someone to do something against their will</li>
-          <li>Wrongful restraint, confinement, assault or intimidation</li>
-          <li>Extortion or damage to a student's property</li>
-          <li>Abetting, conspiring in or watching ragging without reporting it</li>
-        </ul>
-      </div>
-      <div class="ar-card">
-        <h3>Possible punishments</h3>
-        <ul>
-          <li>Suspension from classes, hostel or exams</li>
-          <li>Withholding scholarships and results</li>
-          <li>Rustication for 1 to 4 semesters, or expulsion</li>
-          <li>Fine of ₹25,000 to ₹1 lakh</li>
-          <li>Criminal proceedings under the law</li>
-        </ul>
-      </div>
-    </div>
-    <div class="btns">
-      <a class="btn primary" href="assets/docs/anti-ragging-ugc-regulations.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>UGC anti-ragging regulations (PDF)</a>
-      <a class="btn ghost" href="https://www.antiragging.in/" target="_blank" rel="noopener">Submit the anti-ragging undertaking <svg class="ico"><use href="#i-ext"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<section id="forms">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Resources</span>
-      <h2>Forms and Documents</h2>
-      <p class="lead">Official manuals, calendars and forms in one place. Every link opens the latest copy.</p>
-    </div>
-
-    <div class="docs">
-      <a class="doc featured" href="assets/docs/Hostel%20Manual%20_Updated(new).pdf" target="_blank" rel="noopener">
-        <span class="doc-type">PDF · New</span>
-        <strong>Hostel Manual and SOPs</strong>
-        <span>January 2026. Hostel and mess rules, complaint and grievance SOPs, penalties and forms HO-01 to HO-03. Every resident must read it.</span>
-        <em><svg class="ico"><use href="#i-file"/></svg>Open manual</em>
-      </a>
-      <a class="doc" href="https://www.iitbhilai.ac.in/index.php?pid=acad_course_2026_27M" target="_blank" rel="noopener">
-        <span class="doc-type">PDF</span>
-        <strong>Academic Calendar 2026-27</strong>
-        <span>Monsoon semester: registration, classes, exams and breaks.</span>
-        <em><svg class="ico"><use href="#i-ext"/></svg>Open calendar</em>
-      </a>
-      <a class="doc" href="https://www.iitbhilai.ac.in/index.php?pid=aca_handbook_pdf" target="_blank" rel="noopener">
-        <span class="doc-type">PDF</span>
-        <strong>Students Handbook</strong>
-        <span>Academic information for every programme at IIT Bhilai.</span>
-        <em><svg class="ico"><use href="#i-ext"/></svg>Open handbook</em>
-      </a>
-      <a class="doc" href="https://www.iitbhilai.ac.in/index.php?pid=ug_manual" target="_blank" rel="noopener">
-        <span class="doc-type">PDF</span>
-        <strong>UG Manual</strong>
-        <span>Rules and regulations for BTech and other undergraduate programmes.</span>
-        <em><svg class="ico"><use href="#i-ext"/></svg>Open UG manual</em>
-      </a>
-      <a class="doc" href="https://www.iitbhilai.ac.in/index.php?pid=pg_manual" target="_blank" rel="noopener">
-        <span class="doc-type">PDF</span>
-        <strong>PG Manual</strong>
-        <span>Rules and regulations for MTech, MSc and PhD programmes.</span>
-        <em><svg class="ico"><use href="#i-ext"/></svg>Open PG manual</em>
-      </a>
-      <a class="doc" href="https://www.iitbhilai.ac.in/index.php?pid=iitbhilai_preparatory_program" target="_blank" rel="noopener">
-        <span class="doc-type">Page</span>
-        <strong>Preparatory Program</strong>
-        <span>The one-year preparatory course IIT Bhilai hosts for East-zone IITs in 2026-27: curriculum, fees and calendar.</span>
-        <em><svg class="ico"><use href="#i-ext"/></svg>View programme</em>
-      </a>
-      <a class="doc" href="https://www.iitbhilai.ac.in/index.php?pid=holiday_2026" target="_blank" rel="noopener">
-        <span class="doc-type">PDF</span>
-        <strong>Holiday List 2026</strong>
-        <span>Institute holidays for the calendar year. The 2027 list is in the table below.</span>
-        <em><svg class="ico"><use href="#i-ext"/></svg>Open holiday list</em>
-      </a>
-    </div>
-
-    <div class="form-row">
-      <span>Hostel forms</span>
-      <a href="assets/docs/form-HO-01-hostel-accommodation.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>HO-01 Accommodation</a>
-      <a href="assets/docs/form-HO-02-leaving-campus.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>HO-02 Leaving campus</a>
-      <a href="assets/docs/form-HO-03-hostel-clearance.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>HO-03 Hostel clearance</a>
-    </div>
-    <details class="more" id="allDocs">
-      <summary>Search and browse all documents</summary>
-    <div class="searchbox">
-      <label for="formSearch">Search all forms and documents</label>
-      <input class="search" id="formSearch" type="search" placeholder="For example, hostel, calendar or holiday">
-    </div>
-    <div class="table-wrap">
-      <table id="formsTable">
-        <thead><tr><th>Document</th><th>Category</th><th><span class="sr-only">Open</span></th></tr></thead>
-        <tbody>
-          <tr><td>Hostel Manual and SOPs (January 2026)</td><td class="cat">Hostel</td><td class="act"><a class="dl" href="assets/docs/Hostel%20Manual%20_Updated(new).pdf" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <tr><td>Form HO-01: Hostel accommodation form <small>(2 pages · fill at joining)</small></td><td class="cat">Hostel</td><td class="act"><a class="dl" href="assets/docs/form-HO-01-hostel-accommodation.pdf" target="_blank" rel="noopener">Download PDF</a></td></tr>
-          <tr><td>Form HO-02: Intimation and undertaking for leaving campus <small>(1 page · submit a day before leaving)</small></td><td class="cat">Hostel</td><td class="act"><a class="dl" href="assets/docs/form-HO-02-leaving-campus.pdf" target="_blank" rel="noopener">Download PDF</a></td></tr>
-          <tr><td>Form HO-03: Hostel clearance form <small>(2 pages · submit when vacating)</small></td><td class="cat">Hostel</td><td class="act"><a class="dl" href="assets/docs/form-HO-03-hostel-clearance.pdf" target="_blank" rel="noopener">Download PDF</a></td></tr>
-          <tr><td>Academic Calendar 2026-27 (Monsoon)</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=acad_course_2026_27M" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <!-- <tr><td>All academic calendars (2017 onwards)</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=aca_calendar" target="_blank" rel="noopener">Open page</a></td></tr> -->
-          <tr><td>Students Handbook</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=aca_handbook_pdf" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <tr><td>UG Manual</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=ug_manual" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <tr><td>PG Manual</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=pg_manual" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <tr><td>Preparatory Program</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=iitbhilai_preparatory_program" target="_blank" rel="noopener">Open page</a></td></tr>
-          <tr><td>Course of study</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=courses_study" target="_blank" rel="noopener">Open page</a></td></tr>
-          <!-- <tr><td>Certificates issuance</td><td class="cat">Academic</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=certificates" target="_blank" rel="noopener">Open page</a></td></tr> -->
-          <tr><td>Holiday list 2026</td><td class="cat">General</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=holiday_2026" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <tr><td>Holiday list 2027</td><td class="cat">General</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=holiday_2027" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <tr><td>Anti-ragging regulations (UGC)</td><td class="cat">Anti-ragging</td><td class="act"><a class="dl" href="assets/docs/anti-ragging-ugc-regulations.pdf" target="_blank" rel="noopener">Open PDF</a></td></tr>
-          <tr><td>Student grievance redressal</td><td class="cat">Welfare</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=student_grievance" target="_blank" rel="noopener">Open page</a></td></tr>
-          <!-- <tr><td>Information for girl students</td><td class="cat">Welfare</td><td class="act"><a class="dl" href="https://www.iitbhilai.ac.in/index.php?pid=special_for_girls" target="_blank" rel="noopener">Open page</a></td></tr> -->
-        </tbody>
-      </table>
-      <p class="empty" id="noResults">Nothing matches your search. Try a different word, or contact the office.</p>
-    </div>
-    </details>
-  </div>
-</section>
-
-<section id="portals" class="tint">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Resources</span>
-      <h2>Government Portals</h2>
-      <p class="lead">Official Government of India sites for scholarships, safety, learning and wellbeing.</p>
-    </div>
-    <div class="portals" data-limit="8" data-noun="portals">
-      <a class="portal" href="https://scholarships.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/nsp.webp" alt="National Scholarship Portal logo" loading="lazy"><div><strong>National Scholarship Portal <svg class="ico"><use href="#i-ext"/></svg></strong><span>Apply for central and state scholarships in one place.</span></div></a>
-      <a class="portal" href="https://pmvidyalaxmi.co.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/pmvidyalaxmi.webp" alt="PM Vidyalaxmi logo" loading="lazy"><div><strong>PM Vidyalaxmi <svg class="ico"><use href="#i-ext"/></svg></strong><span>Education loans and interest subvention for higher studies.</span></div></a>
-      <a class="portal" href="https://www.antiragging.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/footer/antiragging.webp" alt="National Anti-Ragging Portal logo" loading="lazy"><div><strong>National Anti-Ragging Portal <svg class="ico"><use href="#i-ext"/></svg></strong><span>Mandatory yearly undertaking and online complaints.</span></div></a>
-      <a class="portal" href="https://telemanas.mohfw.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/telemanas.webp" alt="Tele-MANAS logo" loading="lazy"><div><strong>Tele-MANAS <svg class="ico"><use href="#i-ext"/></svg></strong><span>Free 24x7 mental health support. Call 14416.</span></div></a>
-      <a class="portal" href="https://www.ugc.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/ugc.webp" alt="UGC logo" loading="lazy"><div><strong>University Grants Commission <svg class="ico"><use href="#i-ext"/></svg></strong><span>Regulations, notices and student welfare guidelines.</span></div></a>
-      <a class="portal" href="https://www.education.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/footer/moe.webp" alt="Ministry of Education logo" loading="lazy"><div><strong>Ministry of Education <svg class="ico"><use href="#i-ext"/></svg></strong><span>Policies and schemes for higher education.</span></div></a>
-      <a class="portal" href="https://www.digilocker.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/digilocker.webp" alt="DigiLocker logo" loading="lazy"><div><strong>DigiLocker <svg class="ico"><use href="#i-ext"/></svg></strong><span>Keep official certificates and mark sheets safe online.</span></div></a>
-      <a class="portal" href="https://www.abc.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/abc.webp" alt="APAAR / Academic Bank of Credits logo" loading="lazy"><div><strong>Academic Bank of Credits <svg class="ico"><use href="#i-ext"/></svg></strong><span>Create your APAAR ID and store earned credits.</span></div></a>
-      <a class="portal" href="https://swayam.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/footer/swayam.webp" alt="SWAYAM logo" loading="lazy"><div><strong>SWAYAM <svg class="ico"><use href="#i-ext"/></svg></strong><span>Free online courses from IITs and other institutes.</span></div></a>
-      <a class="portal" href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/ndl.webp" alt="National Digital Library of India logo" loading="lazy"><div><strong>National Digital Library of India <svg class="ico"><use href="#i-ext"/></svg></strong><span>Books, papers and lectures across every subject.</span></div></a>
-      <a class="portal" href="https://nss.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/nss.webp" alt="National Service Scheme logo" loading="lazy"><div><strong>National Service Scheme <svg class="ico"><use href="#i-ext"/></svg></strong><span>Community service and volunteering opportunities.</span></div></a>
-      <a class="portal" href="https://fitindia.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/fitindia.webp" alt="Fit India logo" loading="lazy"><div><strong>Fit India <svg class="ico"><use href="#i-ext"/></svg></strong><span>Fitness challenges, protocols and campus campaigns.</span></div></a>
-      <a class="portal" href="https://kheloindia.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/kheloindia.webp" alt="Khelo India logo" loading="lazy"><div><strong>Khelo India <svg class="ico"><use href="#i-ext"/></svg></strong><span>University games and national sports programmes.</span></div></a>
-      <a class="portal" href="https://www.mygov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/portals/mygov.webp" alt="MyGov logo" loading="lazy"><div><strong>MyGov <svg class="ico"><use href="#i-ext"/></svg></strong><span>Quizzes, competitions and internships for citizens.</span></div></a>
-      <a class="portal" href="https://mybharat.gov.in/" target="_blank" rel="noopener"><img class="plogo" src="assets/img/footer/mybharat.webp" alt="MY Bharat logo" loading="lazy"><div><strong>MY Bharat <svg class="ico"><use href="#i-ext"/></svg></strong><span>Mera Yuva Bharat: volunteering, experiential learning, internships and youth leadership programmes.</span></div></a>
-    </div>
-
-    
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Get in touch</span>
-      <h2>Contact</h2>
-      <p class="lead">Visit the office or write to us. We reply to emails on working days.</p>
-    </div>
-    <div class="contact-grid">
-      <div><h3>Office</h3><p>Student Affairs<br>Indian Institute of Technology Bhilai<br>Kutelabhata, Durg<br>Chhattisgarh 491002</p></div>
-      <div><h3>Email and phone</h3><p><a href="mailto:studentaffairs@iitbhilai.ac.in">studentaffairs@iitbhilai.ac.in</a><br><a href="tel:07882991608">0788-2991608</a></p></div>
-      <div><h3>Office hours</h3><p>Monday to Friday<br>9:30 am to 5:30 pm</p></div>
-      <div><h3>Emergencies</h3><p>Health centre (24x7)<br><a href="tel:07882991612">07882991612</a> · <a href="tel:09424283691">09424283691</a><br>Ambulance: <a href="tel:07647068419">07647068419</a></p></div>
-    </div>
-    <div class="loc-card campus-map">
-      <iframe title="Map of the IIT Bhilai permanent campus" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d374967.6056149059!2d81.317959!3d21.244257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a293d6791e5f399%3A0xfb39e72b5f4501f5!2sIIT%20Bhilai%20Permanent%20Campus!5e1!3m2!1sen!2sin!4v1689530217209!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div>
-        <p class="loc"><svg class="ico"><use href="#i-pin"/></svg><span><b>Location:</b> IIT Bhilai permanent campus, Kutelabhata, Khapri, Durg, Chhattisgarh 491002. About 10 km from Bhilai city.</span></p>
-        <p class="loc"><svg class="ico"><use href="#i-pin"/></svg><span><b>On campus:</b> SBI branch and ATM, and a post office (PIN 491002). A medical store is just outside Gate 2.</span></p>
-        <a class="maplink" href="https://maps.app.goo.gl/cj1EWxjQzEqg813z6" target="_blank" rel="noopener">Get directions <svg class="ico"><use href="#i-ext"/></svg></a>
-      </div>
     </div>
   </div>
 </section>
@@ -787,17 +217,10 @@
     </div>
     <div class="f-bottom">
       <span>&copy; 2026 Office of Student Affairs, Indian Institute of Technology Bhilai</span>
-      <a class="to-top" href="#home">Back to top <svg class="ico"><use href="#i-down"/></svg></a>
+      <a class="to-top" href="#top">Back to top <svg class="ico"><use href="#i-down"/></svg></a>
     </div>
   </div>
 </footer>
-
-<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
-  <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button>
-  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo"><svg class="ico"><use href="#i-left"/></svg></button>
-  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo"><svg class="ico"><use href="#i-right"/></svg></button>
-  <figure><div><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></div></figure>
-</dialog>
 
 <script src="assets/js/main.js"></script>
 </body>
