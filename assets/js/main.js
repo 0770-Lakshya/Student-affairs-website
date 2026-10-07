@@ -12,62 +12,81 @@
     menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');
     if(document.activeElement)document.activeElement.blur();
   });});
-
-  /* Scroll spy: highlight the link for the current section, and its dropdown parent */
-  var ids=[];
-  links.forEach(function(a){var id=a.getAttribute('href').slice(1);if(ids.indexOf(id)<0)ids.push(id);});
-  var sections=ids.map(function(id){return document.getElementById(id);}).filter(Boolean);
-  function setActive(){
-    if(!sections.length)return;
-    var y=window.scrollY+140,current=sections[0];
-    sections.forEach(function(s){if(s.offsetTop<=y)current=s;});
-    if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)current=sections[sections.length-1];
-    var id='#'+current.id;
-    links.forEach(function(a){a.classList.remove('active');});
-    menu.querySelectorAll('.sub a[href="'+id+'"]').forEach(function(a){
-      a.classList.add('active');a.closest('.has-sub').firstElementChild.classList.add('active');
+  /* Mobile menu: each dropdown collapses behind an arrow button, so the open menu shows only the main items */
+  [].forEach.call(menu.querySelectorAll('.has-sub'),function(li){
+    var a=li.firstElementChild,b=document.createElement('button');
+    b.type='button';b.className='sub-toggle';b.setAttribute('aria-expanded','false');
+    b.setAttribute('aria-label','Show '+a.textContent.trim()+' links');
+    b.innerHTML='<svg class="ico"><use href="#i-down"/></svg>';
+    a.insertAdjacentElement('afterend',b);
+    b.addEventListener('click',function(){
+      var open=!li.classList.contains('sub-open');
+      [].forEach.call(menu.querySelectorAll('.sub-open'),function(o){
+        o.classList.remove('sub-open');o.querySelector('.sub-toggle').setAttribute('aria-expanded','false');
+      });
+      li.classList.toggle('sub-open',open);b.setAttribute('aria-expanded',open?'true':'false');
     });
-    menu.querySelectorAll(':scope > li > a[href="'+id+'"]').forEach(function(a){a.classList.add('active');});
-  }
-  window.addEventListener('scroll',setActive,{passive:true});
-  window.addEventListener('resize',setActive);
-  setActive();
+  });
 
-  /* Hero slider */
-  (function(){
-  var slider=document.getElementById('slider'),track=document.getElementById('track');
-  if(!track)return;
-  var slides=[].slice.call(track.children),dots=document.getElementById('dots'),idx=0,timer=null;
-  slides.forEach(function(_,i){
-    var b=document.createElement('button');
-    b.setAttribute('aria-label','Go to slide '+(i+1));
-    b.addEventListener('click',function(){go(i);restart();});
-    dots.appendChild(b);
+  /* Sliders: every [data-slider] (home hero, gym photos). Add data-autoplay to advance on its own. */
+  [].forEach.call(document.querySelectorAll('[data-slider]'),function(slider){
+    var track=slider.querySelector('.track'),dots=slider.querySelector('.dots');
+    var slides=[].slice.call(track.children),idx=0,timer=null,auto=slider.hasAttribute('data-autoplay');
+    if(!slides.length)return;
+    slides.forEach(function(_,i){
+      var b=document.createElement('button');
+      b.setAttribute('aria-label','Go to slide '+(i+1));
+      b.addEventListener('click',function(){go(i);restart();});
+      dots.appendChild(b);
+    });
+    function go(i){
+      idx=(i+slides.length)%slides.length;
+      track.style.transform='translateX('+(-idx*100)+'%)';
+      slides.forEach(function(s,j){s.setAttribute('aria-hidden',j===idx?'false':'true');});
+      [].forEach.call(dots.children,function(d,j){d.setAttribute('aria-current',j===idx?'true':'false');});
+      var next=slides[(idx+1)%slides.length].querySelector('img');
+      if(next&&next.loading==='lazy')next.loading='eager';
+    }
+    function restart(){clearInterval(timer);if(auto&&!reduceMotion)timer=setInterval(function(){go(idx+1);},5500);}
+    slider.querySelector('.sl-btn.prev').addEventListener('click',function(){go(idx-1);restart();});
+    slider.querySelector('.sl-btn.next').addEventListener('click',function(){go(idx+1);restart();});
+    slider.addEventListener('mouseenter',function(){clearInterval(timer);});
+    slider.addEventListener('mouseleave',restart);
+    slider.addEventListener('focusin',function(){clearInterval(timer);});
+    slider.addEventListener('focusout',restart);
+    var sx=null;
+    slider.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+    slider.addEventListener('touchend',function(e){
+      if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;
+      if(Math.abs(dx)>40){go(idx+(dx<0?1:-1));restart();}sx=null;
+    });
+    document.addEventListener('visibilitychange',function(){document.hidden?clearInterval(timer):restart();});
+    go(0);restart();
   });
-  function go(i){
-    idx=(i+slides.length)%slides.length;
-    track.style.transform='translateX('+(-idx*100)+'%)';
-    slides.forEach(function(s,j){s.setAttribute('aria-hidden',j===idx?'false':'true');});
-    [].forEach.call(dots.children,function(d,j){d.setAttribute('aria-current',j===idx?'true':'false');});
-    var next=slides[(idx+1)%slides.length].querySelector('img');
-    if(next&&next.loading==='lazy')next.loading='eager';
-  }
-  function restart(){clearInterval(timer);if(!reduceMotion)timer=setInterval(function(){go(idx+1);},5500);}
-  document.getElementById('slPrev').addEventListener('click',function(){go(idx-1);restart();});
-  document.getElementById('slNext').addEventListener('click',function(){go(idx+1);restart();});
-  slider.addEventListener('mouseenter',function(){clearInterval(timer);});
-  slider.addEventListener('mouseleave',restart);
-  slider.addEventListener('focusin',function(){clearInterval(timer);});
-  slider.addEventListener('focusout',restart);
-  var sx=null;
-  slider.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
-  slider.addEventListener('touchend',function(e){
-    if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;
-    if(Math.abs(dx)>40){go(idx+(dx<0?1:-1));restart();}sx=null;
+
+  /* News strip: slides one card at a time, loops back to the start, pauses on hover, focus or touch */
+  [].forEach.call(document.querySelectorAll('[data-news]'),function(track){
+    var box=track.closest('.news'),timer=null;
+    function step(dir){
+      var card=track.querySelector('.news-card');if(!card)return;
+      var w=card.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||0);
+      var end=track.scrollLeft+track.clientWidth>=track.scrollWidth-4;
+      if(dir>0&&end)track.scrollTo({left:0,behavior:'smooth'});
+      else if(dir<0&&track.scrollLeft<=4)track.scrollTo({left:track.scrollWidth,behavior:'smooth'});
+      else track.scrollBy({left:dir*w,behavior:'smooth'});
+    }
+    function stop(){clearInterval(timer);}
+    function start(){stop();if(!reduceMotion)timer=setInterval(function(){step(1);},4500);}
+    [].forEach.call(box.querySelectorAll('.news-btn'),function(b){
+      b.addEventListener('click',function(){step(+b.dataset.dir);start();});
+    });
+    box.addEventListener('mouseenter',stop);box.addEventListener('mouseleave',start);
+    box.addEventListener('focusin',stop);box.addEventListener('focusout',start);
+    track.addEventListener('touchstart',stop,{passive:true});
+    track.addEventListener('touchend',function(){setTimeout(start,1500);},{passive:true});
+    document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
+    start();
   });
-  document.addEventListener('visibilitychange',function(){document.hidden?clearInterval(timer):restart();});
-  go(0);restart();
-  })();
 
   /* Show more: any [data-limit] grid shows its first N items and a toggle for the rest */
   [].forEach.call(document.querySelectorAll('[data-limit]'),function(grid){
@@ -107,16 +126,20 @@
   filterable(document.querySelector('#gallery .chips'),[].slice.call(document.querySelectorAll('#galleryGrid .tile')),function(n){if(galleryEmpty)galleryEmpty.hidden=n>0;});
 
   /* Lightbox for any [data-gallery] group */
-  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),group=[],gi=0;
+  var lb=document.getElementById('lightbox');
+  if(lb){
+  var lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),group=[],gi=0;
   function show(i){
     gi=(i+group.length)%group.length;
-    var img=group[gi].querySelector('img'),cap=group[gi].querySelector('.cap');
+    var it=group[gi],img=it.tagName==='IMG'?it:it.querySelector('img'),cap=it.querySelector&&it.querySelector('.cap, figcaption strong');
     lbImg.src=img.currentSrc||img.src;lbImg.alt=img.alt;lbCap.textContent=cap?cap.textContent:img.alt;
   }
   document.querySelectorAll('[data-gallery]').forEach(function(g){
     g.addEventListener('click',function(e){
-      var t=e.target.closest('.tile');if(!t)return;
-      group=[].slice.call(g.querySelectorAll('.tile')).filter(function(x){return !x.hidden;});
+      var sel='.tile, .slide, :scope > img',t=e.target.closest('.tile, .slide, img');
+      if(!t||!g.contains(t)||e.target.closest('.sl-btn, .dots'))return;
+      if(t.tagName==='IMG'&&t.closest('.tile, .slide'))t=t.closest('.tile, .slide');
+      group=[].slice.call(g.querySelectorAll(sel)).filter(function(x){return !x.hidden;});
       show(group.indexOf(t));
       if(lb.showModal)lb.showModal();else lb.setAttribute('open','');
     });
@@ -126,6 +149,13 @@
   document.getElementById('lbNext').addEventListener('click',function(){show(gi+1);});
   lb.addEventListener('click',function(e){if(e.target===lb||e.target.tagName==='FIGURE')lb.close();});
   lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(gi-1);if(e.key==='ArrowRight')show(gi+1);});
+  var lx=null;
+  lb.addEventListener('touchstart',function(e){lx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    if(lx===null)return;var dx=e.changedTouches[0].clientX-lx;lx=null;
+    if(Math.abs(dx)>40)show(gi+(dx<0?1:-1));
+  });
+  }
 
   /* Lazy videos: load and play only when on screen (skip for reduced motion / data saver) */
   var saveData=navigator.connection&&navigator.connection.saveData;
