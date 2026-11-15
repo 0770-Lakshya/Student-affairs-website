@@ -139,8 +139,9 @@ h3{margin:0 0 6px;font-family:var(--display);font-size:1.3rem;line-height:1.3;co
 .cosa-badge p{margin:0;color:var(--purple);font-weight:700;font-size:1.2rem}
 .quote{margin:0;padding:30px 34px;background:#fff;border-left:5px solid var(--gold);box-shadow:0 10px 30px rgba(29,21,72,.07)}
 .quote p{margin:0 0 14px;color:var(--muted);font-size:1.1rem}
-.quote footer{display:flex;align-items:center;gap:14px;font-weight:700;color:var(--purple)}
-.quote footer img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.quote footer{display:flex;align-items:center;gap:18px;font-weight:700;color:var(--purple)}
+.quote footer img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}
+.president-footer{justify-content:center;text-align:center;flex-direction:column;gap:14px;padding-top:10px}
 .quote footer small{display:block;font-weight:400;color:var(--muted)}
 .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:28px}
 .event{background:#fff;border:1px solid var(--line);overflow:hidden}
@@ -239,7 +240,14 @@ h3{margin:0 0 6px;font-family:var(--display);font-size:1.3rem;line-height:1.3;co
 .hostel dt{color:var(--muted)}
 .hostel dd{margin:0;font-weight:500}
 .h-staff{margin-top:auto;border-top:1px solid var(--line);padding-top:10px}
-.h-staff .member:first-child{border-top:0;padding-top:0}
+.president-spotlight{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;max-width:520px;margin:0 auto 30px;padding:30px 28px;background:#fff;border-top:4px solid var(--purple);border-radius:14px;box-shadow:0 12px 30px rgba(29,21,72,.1)}
+.president-spotlight img{width:128px;height:128px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--gold)}
+.president-spotlight strong{display:block;font-size:1.5rem;font-weight:800;color:var(--purple);line-height:1.2}
+.president-spotlight small{display:block;color:var(--ink);font-weight:700;font-size:.95rem;margin:6px 0 12px;letter-spacing:.06em;text-transform:uppercase}
+.president-spotlight .mail-ico{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--tint);color:var(--purple);text-decoration:none}
+.president-spotlight .mail-ico:hover{background:var(--purple);color:#fff}
+.president-spotlight .mail-ico .ico{width:20px;height:20px}
+@media (max-width:560px){.president-spotlight{flex-direction:column;text-align:center;padding:24px 22px;gap:16px}.president-spotlight .mail-ico{margin:0 auto}}
 .amenities{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:0;margin-top:32px;border-top:1px solid var(--line);border-left:1px solid var(--line);background:#fff}
 .amenity{padding:22px 22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .amenity h4{margin:0 0 4px;color:var(--purple);font-size:1.1rem}
