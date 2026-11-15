@@ -170,6 +170,59 @@
     },{threshold:.35}).observe(v);
   });
 
+  /* Academic calendar: click to enlarge, with loading state and offline fallback */
+  var calDialog=document.getElementById('calDialog');
+  if(calDialog){
+    var calFrame=calDialog.querySelector('iframe');
+    var calLoading=calDialog.querySelector('.cal-loading');
+    var calError=calDialog.querySelector('.cal-error');
+    var calTimer=null,calLoaded=false;
+    function hideCalLoading(){
+      clearTimeout(calTimer);
+      if(calLoading)calLoading.hidden=true;
+    }
+    if(calFrame)calFrame.addEventListener('load',function(){
+      calLoaded=true;
+      hideCalLoading();
+    });
+    [].forEach.call(document.querySelectorAll('[data-cal-open]'),function(b){
+      b.addEventListener('click',function(){
+        calLoaded=false;
+        if(calLoading)calLoading.hidden=false;
+        if(calError)calError.hidden=true;
+        clearTimeout(calTimer);
+        calTimer=setTimeout(hideCalLoading,1500);
+        setTimeout(function(){
+          if(!calLoaded&&calError)calError.hidden=false;
+        },8000);
+        if(calFrame&&!calFrame.src)calFrame.src=calFrame.dataset.src;
+        if(calDialog.showModal)calDialog.showModal();else calDialog.setAttribute('open','');
+      });
+    });
+    var calClose=calDialog.querySelector('.lb-close');
+    if(calClose)calClose.addEventListener('click',function(){calDialog.close();});
+    calDialog.addEventListener('click',function(e){
+      var t=e.target;
+      if(t===calDialog){calDialog.close();return;}
+      if(!t.classList)return;
+      if(t.classList.contains('cal-frame-wrap')||t.classList.contains('cal-loading')||t.classList.contains('cal-spinner'))calDialog.close();
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&calDialog.open)calDialog.close();});
+  }
+
+  /* Org chart: expandable branch (Hostels) */
+  [].forEach.call(document.querySelectorAll('.org-branch'),function(b){
+    b.addEventListener('click',function(){
+      var id=b.getAttribute('aria-controls');
+      var target=id?document.getElementById(id):null;
+      var expanded=b.getAttribute('aria-expanded')==='true';
+      b.setAttribute('aria-expanded',String(!expanded));
+      if(target)target.hidden=expanded;
+      var drop=target&&target.previousElementSibling;
+      if(drop&&drop.classList.contains('org-drop'))drop.hidden=expanded;
+    });
+  });
+
   /* Forms search */
   var input=document.getElementById('formSearch'),rows=[].slice.call(document.querySelectorAll('#formsTable tbody tr')),none=document.getElementById('noResults');
   if(input)input.addEventListener('input',function(){
