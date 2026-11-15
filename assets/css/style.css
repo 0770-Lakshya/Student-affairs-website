@@ -452,7 +452,7 @@ th{text-align:left;color:var(--purple);font-size:1.12rem;padding:14px 16px;borde
 td{padding:16px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:1.08rem;font-weight:500}
 td.cat{color:var(--muted);white-space:nowrap}
 td.act{text-align:right}
-.dl{display:inline-block;padding:8px 20px;border:2px solid var(--purple);border-radius:4px;font-weight:700;text-decoration:none;font-size:1.05rem;color:var(--purple);background:#fff}
+.dl{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:6px 14px;border:1.5px solid var(--purple);border-radius:4px;font-weight:600;text-decoration:none;font-size:.92rem;letter-spacing:.02em;line-height:1.4;color:var(--purple);background:#fff;white-space:nowrap;cursor:pointer;font-family:inherit}
 .dl:hover{background:var(--purple);color:#fff}
 .empty{display:none;padding:20px 16px;color:var(--muted);text-align:center}
 
@@ -513,6 +513,9 @@ td.act{text-align:right}
 .to-top{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700}
 .to-top .ico{transform:rotate(180deg);width:16px;height:16px}
 
+@media (min-width:561px) and (max-width:1280px){
+  .f-grid>div:last-child{grid-column:1/-1;justify-self:center;max-width:600px;width:100%}
+}
 @media (max-width:1280px){
   .nav a{padding:18px 10px;font-size:.95rem}
   .quick{grid-template-columns:repeat(3,1fr)}
@@ -602,7 +605,6 @@ td.act{text-align:right}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .btn,.track,.tile img,.club,.sub{transition:none}
 }
 
 .nav .ext-ico{width:13px;height:13px;opacity:.75}
@@ -727,7 +729,7 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
   #formsTable td{padding:0;border:0}
   #formsTable td:first-child{grid-column:1/-1}
   #formsTable td.cat{font-size:1rem}
-  .dl{padding:6px 14px;font-size:1rem}
+  .dl{padding:4px 12px;font-size:.88rem}
 }
 @media (max-width:400px){
   .meals div{padding:10px 6px}
@@ -973,3 +975,6 @@ button.doc{font:inherit;cursor:pointer;width:100%}
 .org-branch{font-weight:700}
 .org-node.hostel{background:var(--purple);color:#fff}
 .org-node.hostel small{opacity:.75}
+
+.cal-loading[hidden],.cal-error[hidden]{display:none !important}
+
