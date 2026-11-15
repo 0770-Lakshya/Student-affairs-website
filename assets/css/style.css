@@ -78,6 +78,9 @@ h3{margin:0 0 6px;font-family:var(--display);font-size:1.3rem;line-height:1.3;co
 .btn.primary:hover{background:var(--purple-deep);border-color:var(--purple-deep);color:#fff}
 .btn.ghost{background:#fff;color:var(--purple)}
 .btn.ghost:hover{background:var(--tint)}
+.btn.insta{border:2px solid var(--purple);color:var(--purple);background:#fff;padding:14px 34px;border-radius:999px;font-size:1.1rem;letter-spacing:.01em;box-shadow:none;transition:background .2s,color .2s,transform .2s}
+.btn.insta:hover{background:var(--purple);color:#fff;transform:translateY(-2px)}
+.btn.insta .ico{width:22px;height:22px}
 .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--purple-ink)}
 .btn.gold:hover{background:#b48814;border-color:#b48814;color:var(--purple-ink)}
 
