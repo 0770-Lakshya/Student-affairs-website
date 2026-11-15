@@ -140,8 +140,8 @@ h3{margin:0 0 6px;font-family:var(--display);font-size:1.3rem;line-height:1.3;co
 .quote{margin:0;padding:30px 34px;background:#fff;border-left:5px solid var(--gold);box-shadow:0 10px 30px rgba(29,21,72,.07)}
 .quote p{margin:0 0 14px;color:var(--muted);font-size:1.1rem}
 .quote footer{display:flex;align-items:center;gap:18px;font-weight:700;color:var(--purple)}
-.quote footer img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}
-.president-footer{justify-content:center;text-align:center;flex-direction:column;gap:14px;padding-top:10px}
+
+.president-sig{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);text-align:right;font-weight:700;font-style:normal;color:var(--purple);font-size:1.05rem}
 .quote footer small{display:block;font-weight:400;color:var(--muted)}
 .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:28px}
 .event{background:#fff;border:1px solid var(--line);overflow:hidden}
