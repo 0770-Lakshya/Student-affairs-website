@@ -47,7 +47,7 @@
       var next=slides[(idx+1)%slides.length].querySelector('img');
       if(next&&next.loading==='lazy')next.loading='eager';
     }
-    function restart(){clearInterval(timer);if(auto&&!reduceMotion)timer=setInterval(function(){go(idx+1);},5500);}
+    function restart(){clearInterval(timer);if(auto)timer=setInterval(function(){go(idx+1);},2000);}
     slider.querySelector('.sl-btn.prev').addEventListener('click',function(){go(idx-1);restart();});
     slider.querySelector('.sl-btn.next').addEventListener('click',function(){go(idx+1);restart();});
     slider.addEventListener('mouseenter',function(){clearInterval(timer);});
@@ -64,9 +64,15 @@
     go(0);restart();
   });
 
-  /* News strip: slides one card at a time, loops back to the start, pauses on hover, focus or touch */
+  /* News strip: slides one card at a time, loops back to the start, pauses on hover, focus or touch.
+     Arrow buttons only show when cards overflow the window. */
   [].forEach.call(document.querySelectorAll('[data-news]'),function(track){
-    var box=track.closest('.news'),timer=null;
+    var box=track.closest('.news'),timer=null,nav=box.querySelector('.news-nav');
+    function updateArrows(){
+      if(!nav)return;
+      var need=track.scrollWidth>track.clientWidth+4;
+      nav.style.visibility=need?'visible':'hidden';
+    }
     function step(dir){
       var card=track.querySelector('.news-card');if(!card)return;
       var w=card.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||0);
@@ -76,7 +82,7 @@
       else track.scrollBy({left:dir*w,behavior:'smooth'});
     }
     function stop(){clearInterval(timer);}
-    function start(){stop();if(!reduceMotion)timer=setInterval(function(){step(1);},4500);}
+    function start(){stop();if(!reduceMotion&&track.scrollWidth>track.clientWidth+4)timer=setInterval(function(){step(1);},4500);}
     [].forEach.call(box.querySelectorAll('.news-btn'),function(b){
       b.addEventListener('click',function(){step(+b.dataset.dir);start();});
     });
@@ -85,6 +91,8 @@
     track.addEventListener('touchstart',stop,{passive:true});
     track.addEventListener('touchend',function(){setTimeout(start,1500);},{passive:true});
     document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
+    window.addEventListener('resize',updateArrows);
+    updateArrows();
     start();
   });
 
