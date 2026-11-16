@@ -302,7 +302,7 @@ details p{margin:0 0 22px;color:var(--muted);max-width:70ch}
 /* People: tiered hierarchy (Director > DoSA > office > FICs > wardens) */
 .office-line{text-align:center;margin:-14px 0 26px;color:var(--muted)}
 .office-line a{font-weight:700}
-.pcard{position:relative;width:250px;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid var(--line);border-top:4px solid var(--purple);padding:18px 14px 16px;transition:box-shadow .2s,transform .2s}
+.pcard{position:relative;width:250px;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid var(--line);border-top:4px solid var(--purple);padding:18px 14px 16px;transition:box-shadow .2s,transform .2s;border-radius:16px}
 .pcard:hover{box-shadow:0 14px 28px rgba(29,21,72,.1);transform:translateY(-2px)}
 .pcard img,.p-init{width:116px;height:116px;border-radius:50%;object-fit:cover;margin-bottom:12px}
 .p-init{display:grid;place-items:center;background:var(--lilac);color:#fff;font-weight:900;font-size:1.5rem}
@@ -318,6 +318,7 @@ details p{margin:0 0 22px;color:var(--muted);max-width:70ch}
 .pcard.xl strong{font-size:1.3rem}
 .pcard.xl small{font-size:1.08rem}
 .pcard.key{background:var(--tint);border-top-color:var(--gold)}
+.pcard.office-key{border-radius:16px;box-shadow:0 8px 22px rgba(29,21,72,.1)}
 
 /* People: compact team cards with photos *//* People: compact team cards with photos */
 .teams{display:grid;gap:18px;max-width:1380px;margin:0 auto}
@@ -811,9 +812,8 @@ h2.news-title::after{display:none}
 @media (max-width:560px){.news-track{grid-auto-columns:100%;gap:12px}}
 
 /* Home: Dean's message feature */
-.dean-feature{max-width:1100px;margin:0 auto;background:#fff;border-top:6px solid var(--gold);padding:44px 40px;box-shadow:0 12px 34px rgba(29,21,72,.08);text-align:center}
-.dean-feature>.eyebrow{justify-content:center}
-.dean-title{margin:10px 0 36px;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--purple);font-weight:800}
+.dean-feature{max-width:1100px;margin:0 auto;background:#fff;border-top:6px solid var(--gold);padding:44px 40px;box-shadow:0 12px 34px rgba(29,21,72,.08);text-align:center;border-radius:16px}
+.dean-title{margin:0 0 36px;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--gold);font-weight:800}
 .dean-body{display:flex;flex-direction:column;align-items:center;gap:32px;max-width:900px;margin:0 auto}
 .dean-person{display:flex;flex-direction:column;align-items:center;text-align:center}
 .dean-person img{width:180px;height:180px;border-radius:50%;object-fit:cover;display:block}
@@ -1028,6 +1028,8 @@ button.doc{font:inherit;cursor:pointer;width:100%}
 .block-name span{display:block;font-weight:600;color:var(--muted);font-size:.95rem;margin-top:6px}
 .block-sub{margin:16px auto 0;color:var(--muted);font-size:1.02rem}
 .block-people{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.block-people + .block-people{margin-top:18px}
+.block-people img.office-photo{object-position:center 15%}
 .hostels-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0 auto;max-width:1000px}
 .hostel-sub{background:transparent;border:1px solid var(--line);border-radius:12px;padding:20px}
 .hostel-sub h4{margin:0 0 14px;color:var(--purple);font-size:1.35rem;text-align:center;display:flex;justify-content:center;align-items:baseline;gap:8px}
