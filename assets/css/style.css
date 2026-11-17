@@ -1,4 +1,4 @@
-﻿:root{
+:root{
   --purple:#4a3480;
   --purple-deep:#2e2170;
   --purple-ink:#1d1548;
@@ -1091,4 +1091,54 @@ button.doc{font:inherit;cursor:pointer;width:100%}
 }
 
 strong,small,p,li,dt,dd,h1,h2,h3,h4,h5,h6,blockquote,figcaption,td,th{overflow-wrap:break-word}
+
+/* Anti-ragging: UX refinements */
+#anti-ragging .alert{border-radius:16px;padding:34px 38px;gap:36px}
+#anti-ragging .alert h3{font-size:1.4rem;margin-bottom:6px}
+#anti-ragging .alert-copy{max-width:560px}
+#anti-ragging .helpline{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+#anti-ragging .helpline a.hl-num{display:inline-flex;align-items:center;gap:12px;font-size:clamp(1.7rem,3vw,2.3rem);color:var(--gold)}
+#anti-ragging .helpline a.hl-num .ico{width:26px;height:26px}
+#anti-ragging .helpline small{font-size:.9rem}
+#anti-ragging .ar-card{border-radius:14px}
+#anti-ragging .ar-card h3{display:flex;align-items:center;gap:10px}
+#anti-ragging .ar-card h3 .ico{width:22px;height:22px;color:var(--gold)}
+#anti-ragging .ar-card:not(.committee) li{padding:5px 0;border-bottom:1px solid var(--line)}
+#anti-ragging .ar-card:not(.committee) li:last-child{border-bottom:0}
+#anti-ragging .ar-card.committee li strong{color:var(--ink)}
+#anti-ragging .ar-card.committee li a{display:inline-flex;align-items:center;gap:6px}
+#anti-ragging .ar-card.committee li a .ico{width:14px;height:14px;opacity:.7}
+#anti-ragging .ar-btns .btn{border-radius:999px;padding:14px 32px;box-shadow:0 10px 24px rgba(29,21,72,.16);transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+#anti-ragging .ar-btns .btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(29,21,72,.24)}
+#anti-ragging .ar-btns .btn.ghost:hover{background:var(--purple);color:#fff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(29,21,72,.2)}
+@media (max-width:860px){
+  #anti-ragging .alert{gap:24px}
+  #anti-ragging .helpline{align-items:flex-start}
+}
+
+#anti-ragging .ar-card h3{justify-content:center;text-align:center}
+#anti-ragging .ar-card ul{text-align:left}
+#anti-ragging .ar-note{text-align:left}
+
+/* Student Well-being page */
+.well-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:28px;max-width:1180px;margin:0 auto}
+.well-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:14px;padding:26px 28px;text-align:center}
+.well-card h3{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--purple);margin-bottom:10px}
+.well-card h3 .ico{width:22px;height:22px;color:var(--gold)}
+.well-card p{margin:0;color:var(--muted)}
+.well-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.well-links .btn{border-radius:999px;padding:10px 18px;font-size:.95rem;box-shadow:none}
+
+.f-brand{flex-direction:column;gap:10px;text-align:center}
+
+.well-photo{width:128px;height:128px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 10px 26px rgba(29,21,72,.28)}
+
+.well-photo{border:none}
+
+.president-spotlight .well-photo{border:none}
+
+@media (max-width:560px){
+  .well-links{flex-direction:column;align-items:stretch}
+  .well-links .btn{justify-content:center;font-size:.82rem}
+}
 
