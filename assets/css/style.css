@@ -1142,3 +1142,9 @@ strong,small,p,li,dt,dd,h1,h2,h3,h4,h5,h6,blockquote,figcaption,td,th{overflow-w
   .well-links .btn{justify-content:center;font-size:.82rem}
 }
 
+.block.director .director-card{width:440px;padding:30px 24px 26px}
+.block.director .director-card img{width:180px;height:180px}
+.block.director .director-card strong{font-size:1.45rem}
+
+@media (max-width:560px){.block.director .director-card{width:100%}}
+
