@@ -772,7 +772,7 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
 }
 
 /* Home: news strip */
-.tagline{margin:4px auto 30px;display:block;font-family:'Lora',serif;font-style:italic;font-weight:600;font-size:clamp(1.4rem,3vw,2rem);line-height:1.35;max-width:44ch;text-align:center;color:var(--gold)}
+.tagline{margin:4px auto 30px;display:block;font-family:'Lora',serif;font-style:italic;font-weight:700;font-size:clamp(1.55rem,3.4vw,2.2rem);line-height:1.35;max-width:44ch;text-align:center;color:var(--gold)}
 .intro-ornament{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 24px}
 .intro-ornament::before,.intro-ornament::after{content:"";width:70px;height:1px;background:var(--gold);opacity:.75}
 .intro-ornament span{width:11px;height:11px;background:var(--gold);transform:rotate(45deg)}
@@ -816,7 +816,7 @@ h2.news-title::after{display:none}
 
 /* Home: Dean's message feature */
 .dean-feature{max-width:1100px;margin:0 auto;background:#fff;border-top:6px solid var(--gold);padding:44px 40px;box-shadow:0 12px 34px rgba(29,21,72,.08);text-align:center;border-radius:16px}
-.dean-title{margin:0 0 36px;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--gold);font-weight:800}
+.dean-title{margin:0 0 36px;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--purple);font-weight:400}
 .dean-body{display:flex;flex-direction:column;align-items:center;gap:32px;max-width:900px;margin:0 auto}
 .dean-person{display:flex;flex-direction:column;align-items:center;text-align:center}
 .dean-person img{width:180px;height:180px;border-radius:50%;object-fit:cover;display:block}
