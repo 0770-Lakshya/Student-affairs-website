@@ -300,8 +300,6 @@ details p{margin:0 0 22px;color:var(--muted);max-width:70ch}
 .spots a .ico{width:15px;height:15px;color:var(--gold)}
 
 /* People: tiered hierarchy (Director > DoSA > office > FICs > wardens) */
-.office-line{text-align:center;margin:-14px 0 26px;color:var(--muted)}
-.office-line a{font-weight:700}
 .pcard{position:relative;width:250px;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid var(--line);border-top:4px solid var(--purple);padding:18px 14px 16px;transition:box-shadow .2s,transform .2s;border-radius:16px}
 .pcard:hover{box-shadow:0 14px 28px rgba(29,21,72,.1);transform:translateY(-2px)}
 .pcard img,.p-init{width:116px;height:116px;border-radius:50%;object-fit:cover;margin-bottom:12px}
@@ -318,7 +316,6 @@ details p{margin:0 0 22px;color:var(--muted);max-width:70ch}
 .pcard.xl strong{font-size:1.3rem}
 .pcard.xl small{font-size:1.08rem}
 .pcard.key{background:var(--tint);border-top-color:var(--gold)}
-.pcard.office-key{border-radius:16px;box-shadow:0 8px 22px rgba(29,21,72,.1)}
 
 /* People: compact team cards with photos *//* People: compact team cards with photos */
 .teams{display:grid;gap:18px;max-width:1380px;margin:0 auto}
@@ -825,7 +822,7 @@ h2.news-title::after{display:none}
 .dean-person img{width:180px;height:180px;border-radius:50%;object-fit:cover;display:block}
 .dean-person h4{margin:18px 0 4px;font-size:1.3rem;color:var(--ink);font-weight:700}
 .dean-person p{margin:0;color:var(--purple);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem}
-.dean-quote{margin:0;font-style:italic;line-height:1.8;color:var(--ink);border-left:4px solid var(--gold);padding-left:26px;max-width:800px;width:100%;overflow-wrap:break-word;text-align:left}
+.dean-quote{margin:0;font-style:italic;line-height:1.8;color:var(--ink);padding-left:0;max-width:800px;width:100%;overflow-wrap:break-word;text-align:left}
 .dean-quote p{margin:0 0 18px;font-family:'Lora',serif;font-size:clamp(1.18rem,1.9vw,1.38rem);line-height:1.8;color:#3c3656}
 .dean-quote footer{font-weight:700;color:var(--purple);font-size:1.25rem;margin-top:26px}
 @media (max-width:860px){
@@ -1147,4 +1144,10 @@ strong,small,p,li,dt,dd,h1,h2,h3,h4,h5,h6,blockquote,figcaption,td,th{overflow-w
 .block.director .director-card strong{font-size:1.45rem}
 
 @media (max-width:560px){.block.director .director-card{width:100%}}
+
+.hostel{text-align:center}
+.hostel dl{text-align:center}
+.loc-card{text-align:center}
+.loc.center{text-align:center}
+.ccps-card,.icc-group{text-align:center}
 
